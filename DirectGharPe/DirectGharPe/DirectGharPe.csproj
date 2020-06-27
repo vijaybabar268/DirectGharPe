@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Data\SeedData.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -177,10 +178,23 @@
     <Compile Include="Migrations\202006270721508_InitialModel.Designer.cs">
       <DependentUpon>202006270721508_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006271010284_CreateProductTable.cs" />
+    <Compile Include="Migrations\202006271010284_CreateProductTable.Designer.cs">
+      <DependentUpon>202006271010284_CreateProductTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006271014194_AddParentIdToCategory.cs" />
+    <Compile Include="Migrations\202006271014194_AddParentIdToCategory.Designer.cs">
+      <DependentUpon>202006271014194_AddParentIdToCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Photo.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -200,6 +214,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Data\Products\ProductBrands.json" />
+    <Content Include="Data\Products\ProductCategories.json" />
+    <Content Include="Data\Products\Products.json" />
+    <Content Include="Data\Products\ProductTypes.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -263,6 +281,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202006270721508_InitialModel.resx">
       <DependentUpon>202006270721508_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006271010284_CreateProductTable.resx">
+      <DependentUpon>202006271010284_CreateProductTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006271014194_AddParentIdToCategory.resx">
+      <DependentUpon>202006271014194_AddParentIdToCategory.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

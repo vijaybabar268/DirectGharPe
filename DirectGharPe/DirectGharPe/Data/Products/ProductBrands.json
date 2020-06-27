@@ -1,0 +1,110 @@
+[
+  {
+    "Id": 1,
+    "Name": "Samsung"
+  },
+  {
+    "Id": 2,
+    "Name": "Vivo"
+  },
+  {
+    "Id": 3,
+    "Name": "Oppo"
+  },
+  {
+    "Id": 4,
+    "Name": "Apple"
+  },
+  {
+    "Id": 5,
+    "Name": "Mi"
+  },
+  {
+    "Id": 6,
+    "Name": "Intex"
+  },
+  {
+    "Id": 7,
+    "Name": "Asus"
+  },
+  {
+    "Id": 8,
+    "Name": "Nokia"
+  },
+  {
+    "Id": 9,
+    "Name": "Motorola"
+  },
+  {
+    "Id": 10,
+    "Name": "One Plus"
+  },
+  {
+    "Id": 11,
+    "Name": "Lava"
+  },
+  {
+    "Id": 12,
+    "Name": "HTC"
+  },
+  {
+    "Id": 13,
+    "Name": "Micromax"
+  },
+  {
+    "Id": 14,
+    "Name": "Gionee"
+  },
+  {
+    "Id": 15,
+    "Name": "Sony"
+  },
+  {
+    "Id": 16,
+    "Name": "Lyf"
+  },
+  {
+    "Id": 17,
+    "Name": "Lenovo"
+  },
+  {
+    "Id": 18,
+    "Name": "Dell"
+  },
+  {
+    "Id": 19,
+    "Name": "Acer"
+  },
+  {
+    "Id": 20,
+    "Name": "HP"
+  },
+  {
+    "Id": 21,
+    "Name": "Nikon"
+  },
+  {
+    "Id": 22,
+    "Name": "Casio"
+  },
+  {
+    "Id": 23,
+    "Name": "Fossil"
+  },
+  {
+    "Id": 24,
+    "Name": "Woodland"
+  },
+  {
+    "Id": 25,
+    "Name": "Levi's"
+  },
+  {
+    "Id": 26,
+    "Name": "RADO"
+  },
+  {
+    "Id": 27,
+    "Name": "BVLGARI"
+  }
+]

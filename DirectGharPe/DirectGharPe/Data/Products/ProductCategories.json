@@ -1,0 +1,162 @@
+[
+  {
+    "Id": 1,
+    "Name": "Electronics",
+    "ParentId": "0"
+  },
+  {
+    "Id": 2,
+    "Name": "Cloathing",
+    "ParentId": "0"
+  },
+  {
+    "Id": 3,
+    "Name": "Jewellery",
+    "ParentId": "0"
+  },
+  {
+    "Id": 4,
+    "Name": "FASHION",
+    "ParentId": "0"
+  },
+  {
+    "Id": 5,
+    "Name": "Mobile Phones",
+    "ParentId": 1
+  },
+  {
+    "Id": 6,
+    "Name": "Kurtis",
+    "ParentId": 2
+  },
+  {
+    "Id": 7,
+    "Name": "Sarees",
+    "ParentId": 2
+  },
+  {
+    "Id": 8,
+    "Name": "Earrings",
+    "ParentId": 3
+  },
+  {
+    "Id": 9,
+    "Name": "Salwar",
+    "ParentId": 2
+  },
+  {
+    "Id": 10,
+    "Name": "Lehnga Choli",
+    "ParentId": 2
+  },
+  {
+    "Id": 11,
+    "Name": "One piece",
+    "ParentId": 2
+  },
+  {
+    "Id": 12,
+    "Name": "Plazzo Dress",
+    "ParentId": 2
+  },
+  {
+    "Id": 13,
+    "Name": "Anarkali Dress",
+    "ParentId": 2
+  },
+  {
+    "Id": 14,
+    "Name": "Shrugs",
+    "ParentId": 2
+  },
+  {
+    "Id": 15,
+    "Name": "Handbags",
+    "ParentId": 2
+  },
+  {
+    "Id": 16,
+    "Name": "Long Gown",
+    "ParentId": 2
+  },
+  {
+    "Id": 17,
+    "Name": "Pants",
+    "ParentId": 2
+  },
+  {
+    "Id": 18,
+    "Name": "Dress Material",
+    "ParentId": 2
+  },
+  {
+    "Id": 19,
+    "Name": "Kurta",
+    "ParentId": 2
+  },
+  {
+    "Id": 20,
+    "Name": "Traditional Kurta",
+    "ParentId": 2
+  },
+  {
+    "Id": 21,
+    "Name": "Necklace",
+    "ParentId": 3
+  },
+  {
+    "Id": 22,
+    "Name": "Mangalsutra",
+    "ParentId": 3
+  },
+  {
+    "Id": 23,
+    "Name": "Bangles",
+    "ParentId": 3
+  },
+  {
+    "Id": 24,
+    "Name": "Camera (No DGP)",
+    "ParentId": 1
+  },
+  {
+    "Id": 25,
+    "Name": "Dupatta",
+    "ParentId": 2
+  },
+  {
+    "Id": 26,
+    "Name": "Laptop (No DGP)",
+    "ParentId": 1
+  },
+  {
+    "Id": 27,
+    "Name": "Shoes For Men",
+    "ParentId": 4
+  },
+  {
+    "Id": 28,
+    "Name": "Skirt With Top",
+    "ParentId": 2
+  },
+  {
+    "Id": 29,
+    "Name": "Jacket",
+    "ParentId": 2
+  },
+  {
+    "Id": 30,
+    "Name": "Wrist Watch",
+    "ParentId": 4
+  },
+  {
+    "Id": 31,
+    "Name": "Wallet's",
+    "ParentId": 4
+  },
+  {
+    "Id": 32,
+    "Name": "Top",
+    "ParentId": 2
+  }
+]
