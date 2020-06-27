@@ -1,0 +1,15 @@
+﻿Direct Ghar Pe is a E-Commerce Website.
+
+Contains various roles
+1. Admin
+2. Vendor
+3. Customer
+4. Delivery Boy
+
+Admin will manage Product related information.
+
+Vendor will manage Product related information.
+
+Customer will buy product.
+
+Delivery boy will deliver product to customer.
