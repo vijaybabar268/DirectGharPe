@@ -192,6 +192,10 @@
     <Compile Include="Migrations\202006281708259_OverrideProductTable.Designer.cs">
       <DependentUpon>202006281708259_OverrideProductTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006281813430_AddForeignKeyPropertiesToProduct.cs" />
+    <Compile Include="Migrations\202006281813430_AddForeignKeyPropertiesToProduct.Designer.cs">
+      <DependentUpon>202006281813430_AddForeignKeyPropertiesToProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -303,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006281708259_OverrideProductTable.resx">
       <DependentUpon>202006281708259_OverrideProductTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006281813430_AddForeignKeyPropertiesToProduct.resx">
+      <DependentUpon>202006281813430_AddForeignKeyPropertiesToProduct.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

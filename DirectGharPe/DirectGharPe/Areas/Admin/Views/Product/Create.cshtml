@@ -6,7 +6,8 @@
 
 <h2>Add a Product</h2>
 
-<form>
+@using (Html.BeginForm("Create", "Product"))
+{
     <div class="form-group">
         @Html.LabelFor(m => m.Name)
         @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
@@ -32,4 +33,4 @@
         @Html.DropDownListFor(m => m.Brand, new SelectList(Model.Brands, "Id", "Name"), "", new { @class = "form-control" })
     </div>
     <button type="submit" class="btn btn-primary">Save</button>
-</form>
+}
