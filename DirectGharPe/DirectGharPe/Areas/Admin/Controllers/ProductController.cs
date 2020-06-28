@@ -35,7 +35,7 @@ namespace DirectGharPe.Areas.Admin.Controllers
                 Description = viewModel.Description,
                 Price = viewModel.Price,
                 Quantity = viewModel.Quantity,
-                Slug = viewModel.Name.Trim().ToLower().Replace(' ', '-'),
+                Slug = viewModel.Slug,
                 IsActive = true,
                 DateAdded = DateTime.Now,
                 CategoryId = viewModel.Category,
