@@ -1,13 +1,28 @@
-﻿using System.Web.Mvc;
+﻿using DirectGharPe.Models;
+using DirectGharPe.ViewModels;
+using System.Linq;
+using System.Web.Mvc;
 
 namespace DirectGharPe.Areas.Admin.Controllers
 {
     public class ProductController : Controller
     {
-        // GET: Admin/Product
-        public ActionResult Index()
+        private readonly ApplicationDbContext _context;
+
+        public ProductController()
         {
-            return Content("Hello from Product controller admin panel.");
+            _context = new ApplicationDbContext();
+        }
+        
+        public ActionResult Create()
+        {
+            var viewModel = new ProductFormViewModel()
+            {
+                Categories = _context.Categories.ToList(),
+                Brands = _context.Brands.ToList()
+            };
+
+            return View(viewModel);
         }
     }
 }

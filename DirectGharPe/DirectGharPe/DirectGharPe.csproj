@@ -188,6 +188,10 @@
     <Compile Include="Migrations\202006271014194_AddParentIdToCategory.Designer.cs">
       <DependentUpon>202006271014194_AddParentIdToCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006281708259_OverrideProductTable.cs" />
+    <Compile Include="Migrations\202006281708259_OverrideProductTable.Designer.cs">
+      <DependentUpon>202006281708259_OverrideProductTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -199,6 +203,7 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\ProductFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\aspnet-DirectGharPe-20200627123554.mdf" />
@@ -221,6 +226,9 @@
     <Content Include="Data\Products\Products.json" />
     <Content Include="Data\Products\ProductTypes.json" />
     <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Create.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -269,8 +277,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Views\Product\" />
-    <Folder Include="Areas\Admin\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -294,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006271014194_AddParentIdToCategory.resx">
       <DependentUpon>202006271014194_AddParentIdToCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006281708259_OverrideProductTable.resx">
+      <DependentUpon>202006281708259_OverrideProductTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

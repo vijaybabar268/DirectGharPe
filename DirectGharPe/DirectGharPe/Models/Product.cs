@@ -14,13 +14,7 @@ namespace DirectGharPe.Models
         public DateTime? DateAdded { get; set; }
         public DateTime? DateModified { get; set; }
 
-        public Category Category { get; set; }
-        public int CategoryId { get; set; }
-
-        public Brand Brand { get; set; }
-        public int BrandId { get; set; }
-
-        public Photo Photo { get; set; }
-        public int PhotoId { get; set; }    
+        public Category Category { get; set; }   
+        public Brand Brand { get; set; }                        
     }
 }
