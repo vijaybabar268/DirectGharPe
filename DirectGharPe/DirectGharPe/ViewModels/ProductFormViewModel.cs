@@ -8,6 +8,8 @@ namespace DirectGharPe.ViewModels
 {
     public class ProductFormViewModel
     {
+        public int Id { get; set; }
+
         public string Name { get; set; }
         
         public string Description { get; set; }
@@ -29,6 +31,14 @@ namespace DirectGharPe.ViewModels
             get
             {
                 return Name.Trim().ToLower().Replace(' ', '-');
+            }
+        }
+
+        public string Title
+        {
+            get
+            {
+                return Id == 0 ? "New Product" : "Edit Product";
             }
         }
     }

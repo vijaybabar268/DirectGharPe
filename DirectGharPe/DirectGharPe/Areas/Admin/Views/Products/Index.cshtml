@@ -1,0 +1,57 @@
+﻿@model IEnumerable<DirectGharPe.Models.Product>
+
+@{
+    ViewBag.Title = "Product Listing";
+}
+
+<h2>Product Listing</h2>
+
+<p>
+    @Html.ActionLink("Add Product", "New", "Products", null, new { @class = "btn btn-primary" })
+</p>
+
+<table class="table table-bordered table-condensed table-hover table-responsive table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Brand</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th class="text-center">Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            using (Html.BeginForm("Delete", "Products", new { id = product.Id }, FormMethod.Post, new { onSubmit = "return confirm('Are you sure you want to perform these action?')" }))
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Category.Name</td>
+                    <td>@product.Brand.Name</td>
+                    <td>@product.Description</td>
+                    <td>@product.Price</td>
+                    <td>@product.Quantity</td>
+                    <td class="text-center">
+                        @if (product.IsActive)
+                        {
+                            <span class="my-active">Active</span>
+                        }
+                        else
+                        {
+                            <span class="my-inactive">Inactive</span>
+                        }
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", "Products", new { id = product.Id }, new { @class = "btn btn-link remove-padding" }) |
+                        @Html.ActionLink("Toggle Status", "ToggleStatus", "Products", new { id = product.Id }, new { @class = "btn btn-link remove-padding", onclick = "return confirm('Are you sure you want to perform these action?')" }) |
+                        <button type="submit" class="btn btn-link remove-padding">Delete</button>                        
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

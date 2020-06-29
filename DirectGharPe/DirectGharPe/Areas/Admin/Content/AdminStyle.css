@@ -1,5 +1,5 @@
 ﻿body {
-    padding-top: 70px;
+    padding-top: 40px;
     padding-bottom: 20px;
 }
 
@@ -23,3 +23,16 @@ textarea {
     max-width: 280px;
 }
 
+.remove-padding {
+    padding: 0;
+}
+
+.my-active {
+    color: green;    
+    padding: 2px;
+}
+.my-inactive {
+    color: red;    
+    padding: 2px;
+    font-weight:600;
+}
