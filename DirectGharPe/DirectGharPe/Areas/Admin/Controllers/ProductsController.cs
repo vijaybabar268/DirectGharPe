@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace DirectGharPe.Areas.Admin.Controllers
 {
+    [Authorize(Roles = RoleName.Admin)]
     public class ProductsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -18,10 +19,7 @@ namespace DirectGharPe.Areas.Admin.Controllers
 
         public ActionResult Index()
         {
-            var products = _context.Products
-                .Include(c => c.Category)
-                .Include(b => b.Brand)                
-                .ToList();
+            var products = _context.Products.Include(c => c.Category).Include(b => b.Brand).ToList();
 
             return View(products);
         }
