@@ -14,6 +14,8 @@
     <thead>
         <tr>
             <th>Name</th>
+            <th>Category</th>
+            <th>Brand</th>
             <th>Description</th>
             <th>Price</th>
             <th>Quantity</th>
@@ -26,6 +28,8 @@
         {
             <tr>
                 <td>@product.Name</td>
+                <td>@product.Category.Name</td>
+                <td>@product.Brand.Name</td>
                 <td>@product.Description</td>
                 <td>@product.Price</td>
                 <td>@product.Quantity</td>
@@ -40,9 +44,9 @@
                     }
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", "Product", new { id = product.Id }, new { @class = "btn btn-link" }) |
-                    @Html.ActionLink("Toggle Status", "ToggleStatus", "Product", new { id = product.Id }, new { @class = "btn btn-link" }) |
-                    @Html.ActionLink("Delete", "Delete", "Product", new { id = product.Id }, new { @class = "btn btn-link" })
+                    @Html.ActionLink("Edit", "Edit", "Product", new { id = product.Id }, new { @class = "btn btn-link remove-padding" }) |
+                    @Html.ActionLink("Toggle Status", "ToggleStatus", "Product", new { id = product.Id }, new { @class = "btn btn-link remove-padding" }) |
+                    @Html.ActionLink("Delete", "Delete", "Product", new { id = product.Id }, new { @class = "btn btn-link remove-padding" })
                 </td>
             </tr>
         }
