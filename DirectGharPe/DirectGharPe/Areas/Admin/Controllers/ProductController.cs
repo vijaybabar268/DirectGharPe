@@ -14,6 +14,13 @@ namespace DirectGharPe.Areas.Admin.Controllers
         {
             _context = new ApplicationDbContext();
         }
+
+        public ActionResult Index()
+        {
+            var products = _context.Products.ToList();
+
+            return View(products);
+        }
         
         public ActionResult Create()
         {
@@ -45,7 +52,7 @@ namespace DirectGharPe.Areas.Admin.Controllers
             _context.Products.Add(product);
             _context.SaveChanges();
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Product");
         }
     }
 }

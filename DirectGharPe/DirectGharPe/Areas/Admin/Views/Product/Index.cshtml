@@ -1,0 +1,50 @@
+﻿@model IEnumerable<DirectGharPe.Models.Product>
+
+@{
+    ViewBag.Title = "Product Listing";
+}
+
+<h2>Product Listing</h2>
+
+<p>
+    @Html.ActionLink("Add Product", "Create", "Product", new { @class = "btn btn-primary" })
+</p>
+
+<table class="table table-bordered table-condensed table-hover table-responsive table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Description</td>
+                <td>@product.Price</td>
+                <td>@product.Quantity</td>
+                <td>
+                    @if (product.IsActive)
+                    {
+                        <span>Active</span>
+                    }
+                    else
+                    {
+                        <span>Inactive</span>
+                    }
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", "Product", new { id = product.Id }, new { @class = "btn btn-link" }) |
+                    @Html.ActionLink("Toggle Status", "ToggleStatus", "Product", new { id = product.Id }, new { @class = "btn btn-link" }) |
+                    @Html.ActionLink("Delete", "Delete", "Product", new { id = product.Id }, new { @class = "btn btn-link" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
