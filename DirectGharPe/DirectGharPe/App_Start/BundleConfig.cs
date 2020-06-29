@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace DirectGharPe
 {
@@ -20,6 +19,8 @@ namespace DirectGharPe
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                      "~/Scripts/datatables/jquery.datatables.js",
+                      "~/Scripts/datatables/datatables.bootstrap.js",
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
@@ -29,6 +30,7 @@ namespace DirectGharPe
             /* Admin */
             bundles.Add(new StyleBundle("~/Admin/Content/css").Include(
                 "~/Content/bootstrap.css",
+                "~/Content/datatables/css/datatables.bootstrap.css",
                 "~/Areas/Admin/Content/AdminStyle.css"
                 ));
         }

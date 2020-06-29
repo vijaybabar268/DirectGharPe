@@ -1,35 +1,26 @@
 [
   {
     "Name": "IWatch Series 5",
-    "Description": "",
-    "Price": 7009,
-    "Discount": "",
-    "Qty": 15,
-    "PictureUrl": "images/products/iwatch-series-5.jpg",
-    "ProductBrandId": "",
-    "ProductCategoryId": 30,
-    "ProductTypeId": 2
+    "Description": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum.",
+    "Price": 101,
+    "Quantity": 9,
+    "BrandId": 6,
+    "CategoryId": 1
   },
   {
     "Name": "Analog Dial Watch",
-    "Description": "",
-    "Price": 3098,
-    "Discount": "",
-    "Qty": 15,
-    "PictureUrl": "images/products/analog-dial-watch.jpg",
-    "ProductBrandId": 27,
-    "ProductCategoryId": 30,
-    "ProductTypeId": 2
+    "Description": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum.",
+    "Price": 501,
+    "Quantity": 8,
+    "BrandId": 27,
+    "CategoryId": 30
   },
   {
-    "Name": "Khadi Lilen Silk Saree",
-    "Description": "",
-    "Price": 789,
-    "Discount": "",
-    "Qty": 15,
-    "PictureUrl": "images/products/khadi-lilen-silk-saree.jpg",
-    "ProductBrandId": "",
-    "ProductCategoryId": 7,
-    "ProductTypeId": 2
+    "Name": "TVS Keyboard",
+    "Description": "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum.",
+    "Price": 1200,
+    "Quantity": 7,
+    "BrandId": 4,
+    "CategoryId": 4
   }
 ]
