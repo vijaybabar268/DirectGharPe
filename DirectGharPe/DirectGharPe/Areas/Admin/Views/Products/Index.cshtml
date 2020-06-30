@@ -12,12 +12,11 @@
 
 <table id="products" class="table table-bordered table-condensed table-hover table-responsive table-striped">
     <thead>
-        <tr>
+        <tr class="btn-primary">
             <th>Name</th>
             <th>Category</th>
             <th>Brand</th>
             <th>Photo</th>
-            <th>Description</th>
             <th>Price</th>
             <th>Quantity</th>
             <th>Status</th>
@@ -40,7 +39,10 @@
                 },
                 columns: [
                     {
-                        data: "name"
+                        data: "name",
+                        render: function (data, type, product) {
+                            return '<a href="javascript:void(0)" title=' + product.description +'>' + product.name +'</a>';
+                        }
                     },
                     {
                         data: "category.name"
@@ -57,10 +59,7 @@
                                 return "NA";
                             }                                                        
                         }
-                    },
-                    {
-                        data: "description"
-                    },
+                    },                    
                     {
                         data: "price"
                     },
