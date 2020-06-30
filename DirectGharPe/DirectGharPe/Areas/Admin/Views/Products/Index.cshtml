@@ -96,9 +96,10 @@
                     {
                         data: "id",
                         render: function (data) {
-                            return "<a class='btn btn-link remove-padding' href='Products/edit/" + data + "'>Edit</a>" +
+                            return "<a class='btn btn-link remove-padding' href='Products/Edit/" + data + "'>Edit</a>" +
                                 " | <a class='btn btn-link remove-padding' href='Products/ToggleStatus/" + data + "'>Toggle Status</a>"+
-                                " | <button class='btn btn-link remove-padding js-delete' data-product-id="+ data +">Delete</button>";
+                                " | <button class='btn btn-link remove-padding js-delete' data-product-id=" + data + ">Delete</button>" +
+                                " | <a class='btn btn-link remove-padding' href='Photos/Index/" + data + "'>Manage Photos</a>";
                         }
                     }
                 ]
