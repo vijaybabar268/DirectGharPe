@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = ViewBag.Title;
+}
+
+<h3>@ViewBag.Title</h3>
+
+<p>
+    @Html.ActionLink("Add photo", "New", "photos", null, new { @class = "btn btn-primary" })
+</p>
+
+<table id="photos" class="table table-bordered table-condensed table-hover table-responsive table-striped">
+    <thead>
+        <tr>
+            <th>Photo</th>
+            <th>Default</th>
+            <th>Status</th>
+            <th>Action</th>            
+        </tr>
+    </thead>
+    <tbody>        
+    </tbody>
+</table>
+
+<p>
+    @Html.ActionLink("Back to Product Listing", "Index", "Products", null, new { @class = "btn btn-link remove-padding" })
+</p>
+
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+
+            $("#photos").DataTable({
+                ajax: {
+                    url: "/Api/Photos/PhotosByProductId/@Session["ProductId"]",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "photoThumbUrl",
+                        render: function (data) {
+                            return '<div class="imageContainer"><img src="@Request.Url.GetLeftPart(UriPartial.Authority)//'+ data +'" /></div>';
+                        }
+                    },
+                    {
+                        data: "isDefault",
+                        render: function (data,type,photo) {
+                            if (photo.isDefault) {
+                                return '<span class="badge badge-info">Default</span>';
+                            } else {
+                                return '';
+                            }
+                        }
+                    },
+                    {
+                        data: "isActive",
+                        render: function (data,type,photo) {
+                            if (photo.isActive === true)
+                                return "<span class='badge badge-success'>Active</span>";
+                            else {
+                                return "<span class='badge badge-warning'>Inactive</span>";
+                            }
+                        }
+                    },
+                    {
+                        data: "id",
+                        render: function (data) {
+                            return "<a class='btn btn-link remove-padding' href='@Request.Url.GetLeftPart(UriPartial.Authority)/Admin/Photos/ToggleDefault/" + data + "'>Toggle Default</a>" +
+                                " | <a class='btn btn-link remove-padding' href='@Request.Url.GetLeftPart(UriPartial.Authority)/Admin/Photos/ToggleStatus/" + data + "'>Toggle Status</a>" +
+                                " | <button class='btn btn-link remove-padding js-delete' data-photo-id=" + data + ">Delete</button>";
+                        }
+                    }
+                ]
+            });
+
+            $("#photos").on("click", ".js-delete", function () {
+                var button = $(this);
+                if (confirm("Are you sure you want to perform these action?")) {
+                    $.ajax({
+                        url: "/Api/Photos/" + button.attr("data-photo-id"),
+                        method: "DELETE",
+                        success: function () {
+                            button.parents("tr").remove();
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}

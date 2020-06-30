@@ -22,6 +22,7 @@ namespace DirectGharPe.Areas.Admin.Controllers.Api
             var products = _context.Products
                 .Include(c => c.Category)
                 .Include(b => b.Brand)
+                .Include(p => p.Photo)
                 .ToList();
 
             return products;

@@ -4,7 +4,7 @@
     ViewBag.Title = "Product Listing";
 }
 
-<h2>Product Listing</h2>
+<h3>Product Listing</h3>
 
 <p>
     @Html.ActionLink("Add Product", "New", "Products", null, new { @class = "btn btn-primary" })
@@ -16,6 +16,7 @@
             <th>Name</th>
             <th>Category</th>
             <th>Brand</th>
+            <th>Photo</th>
             <th>Description</th>
             <th>Price</th>
             <th>Quantity</th>
@@ -23,34 +24,7 @@
             <th>Action</th>
         </tr>
     </thead>
-    <tbody>
-        @*@foreach (var product in Model)
-        {
-            <tr>
-                <td>@product.Name</td>
-                <td>@product.Category.Name</td>
-                <td>@product.Brand.Name</td>
-                <td>@product.Description</td>
-                <td>@product.Price</td>
-                <td>@product.Quantity</td>
-                <td class="text-center">
-                    @if (product.IsActive)
-                    {
-                        <span class="my-active">Active</span>
-                    }
-                    else
-                    {
-                        <span class="my-inactive">Inactive</span>
-                    }
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", "Products", new { id = product.Id }, new { @class = "btn btn-link remove-padding" }) |
-                    @Html.ActionLink("Toggle Status", "ToggleStatus", "Products", new { id = product.Id }, new { @class = "btn btn-link remove-padding", onclick = "return confirm('Are you sure you want to perform these action?')" }) |
-                    <button type="submit" class="btn btn-link remove-padding js-delete" data-product-id="@product.Id">Delete</button>
-                </td>
-            </tr>
-
-        }*@
+    <tbody>        
     </tbody>
 </table>
 
@@ -75,6 +49,16 @@
                         data: "brand.name"
                     },
                     {
+                        data: "photo.photoThumbUrl",
+                        render: function (data, type, product) {                            
+                            if (product.photo != null && product.photo.isActive) {
+                                return '<div class="imageContainer"><img src="@Request.Url.GetLeftPart(UriPartial.Authority)//' + data + '" /></div>'
+                            } else {
+                                return "NA";
+                            }                                                        
+                        }
+                    },
+                    {
                         data: "description"
                     },
                     {
@@ -85,21 +69,21 @@
                     },
                     {
                         data: "isActive",
-                        render: function (data) {                            
+                        render: function (data) {
                             if (data === true)
-                                return "<span class='my-active'>Active</span>";
+                                return "<span class='badge badge-success'>Active</span>";
                             else {
-                                return "<span class='my-inactive'>Inactive</span>";
-                            }                            
+                                return "<span class='badge badge-warning'>Inactive</span>";
+                            }
                         }
                     },
                     {
                         data: "id",
-                        render: function (data) {
+                        render: function (data,type,product) {
                             return "<a class='btn btn-link remove-padding' href='Products/Edit/" + data + "'>Edit</a>" +
                                 " | <a class='btn btn-link remove-padding' href='Products/ToggleStatus/" + data + "'>Toggle Status</a>"+
                                 " | <button class='btn btn-link remove-padding js-delete' data-product-id=" + data + ">Delete</button>" +
-                                " | <a class='btn btn-link remove-padding' href='Photos/Index/" + data + "'>Manage Photos</a>";
+                                " | <a class='btn btn-link remove-padding' href='Photos/Index/" + data + "?name=" + product.name+"'>Manage Photos</a>";
                         }
                     }
                 ]
@@ -111,7 +95,7 @@
                     $.ajax({
                         url: "/Api/Products/" + button.attr("data-product-id"),
                         method: "DELETE",
-                        success: function () {                            
+                        success: function () {
                             table.row(button.parents("tr")).remove().draw();
                         }
                     })

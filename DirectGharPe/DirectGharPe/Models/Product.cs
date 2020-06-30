@@ -34,5 +34,9 @@ namespace DirectGharPe.Models
         
         [Required]
         public int BrandId { get; set; }
+
+        public Photo Photo { get; set; }
+
+        public int? PhotoId { get; set; }
     }
 }

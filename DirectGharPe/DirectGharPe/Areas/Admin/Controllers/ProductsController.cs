@@ -1,7 +1,6 @@
 ﻿using DirectGharPe.Models;
 using DirectGharPe.ViewModels;
 using System;
-using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -18,10 +17,8 @@ namespace DirectGharPe.Areas.Admin.Controllers
         }
 
         public ActionResult Index()
-        {
-            var products = _context.Products.Include(c => c.Category).Include(b => b.Brand).ToList();
-
-            return View(products);
+        {            
+            return View();
         }
         
         public ActionResult New()

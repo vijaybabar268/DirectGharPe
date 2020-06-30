@@ -34,16 +34,18 @@ textarea {
     padding: 0;
 }
 
-.my-active {
-    color: green;    
-    padding: 2px;
+.badge-success {
+    color: #fff;
+    background-color: green;
 }
-.my-inactive {
-    color: red;    
-    padding: 2px;
-    font-weight:600;
+.badge-warning {
+    color: #fff;
+    background-color: red;
 }
-
+.badge-info {
+    color: #fff;
+    background-color: #17a2b8;
+}
 /* Bootstrap Overrides Styles*/
 .navbar-inverse {
     background-color: #FF4342;
@@ -93,4 +95,12 @@ h6,
 }
 .btn-link {    
     color: blue;    
+}
+
+.imageContainer > img {
+    transition: transform 0.50s ease;
+}
+
+.imageContainer > img:hover {
+    -webkit-transform: scale(1.1);
 }

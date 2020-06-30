@@ -1,0 +1,19 @@
+﻿@model DirectGharPe.ViewModels.ProductPhotoFormViewModel
+
+@{
+    ViewBag.Title = "ProductPhotoForm";
+}
+
+<h2>ProductPhotoForm</h2>
+
+@using (Html.BeginForm("Create", "Photos", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(m => m.Id)
+    @Html.HiddenFor(m => m.ProductId)
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.PhotoUrl)
+        @Html.TextBoxFor(m => m.PhotoUrl, new { type = "file" })
+    </div>
+    <button class="btn btn-primary">Save</button>
+}
