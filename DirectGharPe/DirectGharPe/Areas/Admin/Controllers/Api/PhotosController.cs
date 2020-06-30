@@ -46,6 +46,10 @@ namespace DirectGharPe.Areas.Admin.Controllers.Api
         {
             var photo = _context.Photos.Find(id);
 
+            var productInDb = _context.Products.Find(photo.ProductId);
+            productInDb.PhotoId = null;
+            _context.SaveChanges();
+            
             _context.Photos.Remove(photo);
             _context.SaveChanges();
         }
