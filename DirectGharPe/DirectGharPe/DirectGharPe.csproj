@@ -208,6 +208,10 @@
     <Compile Include="Migrations\202006281813430_AddForeignKeyPropertiesToProduct.Designer.cs">
       <DependentUpon>202006281813430_AddForeignKeyPropertiesToProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006300705514_AddProductIdToPhotos.cs" />
+    <Compile Include="Migrations\202006300705514_AddProductIdToPhotos.Designer.cs">
+      <DependentUpon>202006300705514_AddProductIdToPhotos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -567,6 +571,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006281813430_AddForeignKeyPropertiesToProduct.resx">
       <DependentUpon>202006281813430_AddForeignKeyPropertiesToProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006300705514_AddProductIdToPhotos.resx">
+      <DependentUpon>202006300705514_AddProductIdToPhotos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
