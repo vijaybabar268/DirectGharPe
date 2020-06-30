@@ -1,6 +1,7 @@
 ﻿using DirectGharPe.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Http;
 
@@ -18,7 +19,10 @@ namespace DirectGharPe.Areas.Admin.Controllers.Api
         [HttpGet]
         public IEnumerable<Product> Products()
         {
-            var products = _context.Products.ToList();
+            var products = _context.Products
+                .Include(c => c.Category)
+                .Include(b => b.Brand)
+                .ToList();
 
             return products;
         }
