@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DirectGharPe.Data
+namespace DirectGharPe.Areas.Admin.Data
 {
     public static class Seed
     {                

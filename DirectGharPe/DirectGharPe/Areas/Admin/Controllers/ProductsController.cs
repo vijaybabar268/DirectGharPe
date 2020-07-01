@@ -1,5 +1,5 @@
-﻿using DirectGharPe.Models;
-using DirectGharPe.ViewModels;
+﻿using DirectGharPe.Areas.Admin.ViewModels;
+using DirectGharPe.Models;
 using System;
 using System.Linq;
 using System.Web.Mvc;

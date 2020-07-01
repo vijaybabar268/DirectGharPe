@@ -1,4 +1,4 @@
-﻿using DirectGharPe.Data;
+﻿using DirectGharPe.Areas.Admin.Data;
 using DirectGharPe.Models;
 using Microsoft.Owin;
 using Owin;

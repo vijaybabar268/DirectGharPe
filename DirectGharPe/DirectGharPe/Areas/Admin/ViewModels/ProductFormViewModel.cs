@@ -1,10 +1,7 @@
 ﻿using DirectGharPe.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
-namespace DirectGharPe.ViewModels
+namespace DirectGharPe.Areas.Admin.ViewModels
 {
     public class ProductFormViewModel
     {

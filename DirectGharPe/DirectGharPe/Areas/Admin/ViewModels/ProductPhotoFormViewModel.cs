@@ -1,4 +1,4 @@
-﻿namespace DirectGharPe.ViewModels
+﻿namespace DirectGharPe.Areas.Admin.ViewModels
 {
     public class ProductPhotoFormViewModel
     {

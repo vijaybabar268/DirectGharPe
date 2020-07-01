@@ -31,7 +31,7 @@
     <script>
         $(document).ready(function () {
 
-            $("#photos").DataTable({
+            var table = $("#photos").DataTable({
                 ajax: {
                     url: "/Api/Photos/PhotosByProductId/@Session["ProductId"]",
                     dataSrc: ""
@@ -81,7 +81,7 @@
                         url: "/Api/Photos/" + button.attr("data-photo-id"),
                         method: "DELETE",
                         success: function () {
-                            button.parents("tr").remove();
+                            table.row(button.parents("tr")).remove().draw();
                         }
                     });
                 }
