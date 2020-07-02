@@ -1,8 +1,192 @@
 ﻿
 @{
-    ViewBag.Title = "Detail";
+    ViewBag.Title = "Product Detail";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Detail</h2>
+<h2>Product Detail</h2>
 
+<div class="row">
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <div class="caption text-center" onclick="location.href=''">
+                <div class="position-relative">
+                    <img src="https://directgharpe.com//assets/user/images/3de250f0bbd266fcbba1eea289be94af.jpg" style="height:320px;" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 thumbnail" style="padding:10px;">
+            <div class="col-md-3">
+                <img src="https://directgharpe.com//assets/user/images/3de250f0bbd266fcbba1eea289be94af.jpg" style="height:65px;" />
+            </div>
+            <div class="col-md-3">
+                <img src="https://directgharpe.com//assets/user/images/0fe33143f577d369a1e47dea0197def3.jpg" style="height:65px;" />
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8 well well-lg">
+        <div style="margin-bottom:35px">
+            <div class="col-md-1" style="padding: 0;">
+                <p style="font-size: 12px;padding-top: 5px;"><strong>Share On</strong></p>
+            </div>
+            <div class="col-md-11" style="padding:0 10px;">
+                <ul class="prod-dtl-social-media" style="padding:0;">
+                    <li>
+                        <a onclick="shareinsocialmedia('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdirectgharpe.com%2F&amp;title=Direct GharPe | Home Page')" href="">
+                            <img src="https://directgharpe.com//assets/user/img/social/facebook_color.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/intent/tweet?status=https://directgharpe.com/" target="_blank">
+                            <img src="https://directgharpe.com//assets/user/img/social/twitter_color.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/sharer.php?u=https://directgharpe.com/" target="_blank">
+                            <img src="https://directgharpe.com//assets/user/img/social/insta_color.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/?text=https://directgharpe.com/" target="_blank">
+                            <img src="https://directgharpe.com//assets/user/img/social/Watsapp_color.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>    
+        <h3>Samsung Galaxy A50s</h3>
+        <p><strong>Category</strong> : Mobile Phones</p>
+        <ul class="list-inline" style="padding: 10px 0px;">
+            <li class="text-left">
+                <i class="people lighter"></i>
+                <span class="final-price-dtl">₹ 21,849</span> <br /> <span>₹ <strike>24,034</strike></span>
+            </li>
+            <li></li>
+            <li class="text-right">
+                <i class="glyphicon lighter"></i>
+                <span class="discount-dtl">10% off</span> <br />You Save <span class="you-save-dtl">₹ 2,185</span>
+            </li>
+        </ul>
+        <p><strong>Quantity</strong> : <input type="number" name="name" value="10" class="form-control qty-dtl" /> </p>
+        <div class="prod-dtl-btn">
+            <button class="btn btn-warning">Add Cart</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-success">Buy Now</button>
+        </div>
+        <p><strong>Description</strong> :</p>
+        <ul class="prod-desc-list">
+            <li>
+                Android v9.0 (Pie),
+            </li>
+            <li>
+                2.3 GHz Octa Core,
+            </li>
+            <li>
+                4 GB RAM,
+            </li>
+            <li>
+                128 GB Storage,
+            </li>
+            <li>
+                6.4" (16.26 cm) Display,
+            </li>
+            <li>
+                4000 mAh Battery,
+            </li>
+            <li>
+                48 MP Rear Camera,
+            </li>
+            <li>
+                32 MP Front Camera,
+            </li>
+            <li>
+                VoLTE,
+            </li>
+            <li>
+                Dual SIM
+            </li>
+        </ul>
+
+    </div>
+</div>
+@*Most Popular*@
+<div class="row pd1">
+    <div class="col-md-12">
+        <h3 class="text-center">Similar Popular</h3>
+    </div>
+</div>
+
+<div class="row text-center">
+    <div class="col-md-3">
+        <div class="thumbnail">
+            <div class="caption text-center" onclick="location.href=''">
+                <div class="position-relative imageContainer">
+                    <img src="https://directgharpe.com//assets/user/images/3de250f0bbd266fcbba1eea289be94af.jpg" style="height:235px;" />
+                </div>
+                <h4 id="thumbnail-label"><a href="" target="_blank">Samsung Galaxy A50s</a></h4>
+            </div>
+            <div class="card-footer text-center">
+                <ul class="list-inline">
+                    <li class="text-left"><i class="people lighter"></i><span class="final-price">₹ 21,849</span> <br /> <span>₹ <strike>24,034</strike></span> </li>
+                    <li></li>
+                    <li class="text-right"><i class="glyphicon lighter"></i><span class="discount">10% off</span> <br />You Save <span class="you-save">₹ 2,185</span></li>
+                </ul>
+                <button class="btn btn-warning">Add Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="thumbnail">
+            <div class="caption text-center" onclick="location.href=''">
+                <div class="position-relative imageContainer">
+                    <img src="https://directgharpe.com//assets/user/images/87ff4608aef437e400f1404f6e5cbf5c.jpeg" style="height:235px;" />
+                </div>
+                <h4 id="thumbnail-label"><a href="" target="_blank">Samsung Galaxy A70</a></h4>
+            </div>
+            <div class="card-footer text-center">
+                <ul class="list-inline">
+                    <li class="text-left"><i class="people lighter"></i><span class="final-price">₹ 21,849</span> <br /> <span>₹ <strike>24,034</strike></span> </li>
+                    <li></li>
+                    <li class="text-right"><i class="glyphicon lighter"></i><span class="discount">10% off</span> <br />You Save <span class="you-save">₹ 2,185</span></li>
+                </ul>
+                <button class="btn btn-warning">Add Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="thumbnail">
+            <div class="caption text-center" onclick="location.href=''">
+                <div class="position-relative imageContainer">
+                    <img src="https://directgharpe.com//assets/user/images/72f31a1c922f40a6f56df24b1843a71a.jpeg" style="height:235px;" />
+                </div>
+                <h4 id="thumbnail-label"><a href="" target="_blank">Samsung Galaxy Note 10</a></h4>
+            </div>
+            <div class="card-footer text-center">
+                <ul class="list-inline">
+                    <li class="text-left"><i class="people lighter"></i><span class="final-price">₹ 21,849</span> <br /> <span>₹ <strike>24,034</strike></span> </li>
+                    <li></li>
+                    <li class="text-right"><i class="glyphicon lighter"></i><span class="discount">10% off</span> <br />You Save <span class="you-save">₹ 2,185</span></li>
+                </ul>
+                <button class="btn btn-warning">Add Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="thumbnail">
+            <div class="caption text-center" onclick="location.href=''">
+                <div class="position-relative imageContainer">
+                    <img src="https://directgharpe.com//assets/user/images/948eed83749b9b49b9b293dd4b6eeb6e.jpeg" style="height:235px;" />
+                </div>
+                <h4 id="thumbnail-label"><a href="" target="_blank">Samsung Galaxy A30</a></h4>
+            </div>
+            <div class="card-footer text-center">
+                <ul class="list-inline">
+                    <li class="text-left"><i class="people lighter"></i><span class="final-price">₹ 21,849</span> <br /> <span>₹ <strike>24,034</strike></span> </li>
+                    <li></li>
+                    <li class="text-right"><i class="glyphicon lighter"></i><span class="discount">10% off</span> <br />You Save <span class="you-save">₹ 2,185</span></li>
+                </ul>
+                <button class="btn btn-warning">Add Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
