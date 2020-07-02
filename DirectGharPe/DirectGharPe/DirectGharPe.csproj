@@ -243,6 +243,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bxslider\jquery.bxslider.css" />
     <Content Include="Content\DataTables\css\autoFill.bootstrap.css" />
     <Content Include="Content\DataTables\css\autoFill.bootstrap.min.css" />
     <Content Include="Content\DataTables\css\autoFill.bootstrap4.css" />
@@ -400,6 +401,9 @@
     <Content Include="Content\DataTables\images\sort_desc.png" />
     <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
     <Content Include="Content\DataTables\swf\flashExport.swf" />
+    <Content Include="Content\img\bx_loader.gif" />
+    <Content Include="Content\img\controls.png" />
+    <Content Include="Content\img\subscribe.png" />
     <Content Include="Docs\RequirementDocument.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -423,6 +427,7 @@
     <Content Include="Areas\Admin\Data\Products\Products.json" />
     <Content Include="Areas\Admin\Data\Products\ProductTypes.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\bxslider\jquery.bxslider.js" />
     <Content Include="Scripts\copy_csv_xls_pdf.swf" />
     <Content Include="Scripts\dataTables.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />

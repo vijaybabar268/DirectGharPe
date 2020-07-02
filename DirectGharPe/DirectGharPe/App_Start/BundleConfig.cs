@@ -33,6 +33,17 @@ namespace DirectGharPe
                 "~/Content/datatables/css/datatables.bootstrap.css",
                 "~/Areas/Admin/Content/AdminStyle.css"
                 ));
+
+            /* User */
+            bundles.Add(new StyleBundle("~/Content/User").Include(
+                      "~/Content/bootstrap.css",
+                      "~/Content/site.css",
+                      "~/Content/bxslider/jquery.bxslider.css"
+                      ));
+
+            bundles.Add(new ScriptBundle("~/bundles/lib").Include(
+                       "~/Scripts/bxslider/jquery.bxslider.js"));
+
         }
     }
 }
