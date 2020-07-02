@@ -42,7 +42,9 @@ namespace DirectGharPe
                       ));
 
             bundles.Add(new ScriptBundle("~/bundles/lib").Include(
-                       "~/Scripts/bxslider/jquery.bxslider.js"));
+                       "~/Scripts/bxslider/jquery.bxslider.js",
+                       "~/Scripts/js/common.js"
+                       ));
 
         }
     }

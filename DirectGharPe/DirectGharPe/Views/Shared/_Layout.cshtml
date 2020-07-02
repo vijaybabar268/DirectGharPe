@@ -7,182 +7,22 @@
     @Styles.Render("~/Content/User")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
-    <!--Top Social Bar-->
-    <div class="top-navbar">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
-                    <p><a href="mailto:support@directgharpe.com" target="_top">Email: support@directgharpe.com</a></p>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 text-right">
-                    <ul class="top-social-media">
-                        <li>
-                            <a onclick="shareinsocialmedia('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdirectgharpe.com%2F&amp;title=Direct GharPe | Home Page')" href="">
-                                <img src="https://directgharpe.com//assets/user/img/social/facebook_color.svg" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/intent/tweet?status=https://directgharpe.com/" target="_blank">
-                                <img src="https://directgharpe.com//assets/user/img/social/twitter_color.svg" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/sharer.php?u=https://directgharpe.com/" target="_blank">
-                                <img src="https://directgharpe.com//assets/user/img/social/insta_color.svg" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://wa.me/?text=https://directgharpe.com/" target="_blank">
-                                <img src="https://directgharpe.com//assets/user/img/social/Watsapp_color.svg" alt="">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 text-right">
-                    <p>
-                        <a href="tel:760 390 9999">Customer Care No: 760 390 9999</a>
-                        <span class="log-in-btn" style="padding-left: 20px;"><a href="https://directgharpe.com/index.php?/account/login.html">Login Now</a></span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+<body>   
+    @Html.Partial("_TopBar")
 
-    <!--Main Header Bar-->
-    <div class="main-navbar navbar-inverse">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3">
-                    <div class="logo">
-                        <a href="@Request.Url.GetLeftPart(UriPartial.Authority)">
-                            <img src="~/Content/img/DirectGharPeLogo.svg" alt="Direct GharPe Logo">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 text-center">
-                    <ul class="main-nav">
-                        <li>
-                            @Html.ActionLink("Electronics", "Category", "Product", new { id="1", name= "Electronics" }, null)                            
-                        </li>
-                        <li>
-                            @Html.ActionLink("Cloathing", "Category", "Product", new { id = "2", name = "Cloathing" }, null)                            
-                        </li>
-                        <li>
-                            @Html.ActionLink("Jewellery", "Category", "Product", new { id = "3", name = "Jewellery" }, null)                            
-                        </li>
-                        <li>
-                            @Html.ActionLink("Fashion", "Category", "Product", new { id = "4", name = "Fashion" }, null)                            
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 text-right">
-                    <ul class="main-site">
-                        <li>
-                            <img src="https://directgharpe.com//assets/user/img/search.svg" alt="">
-                        </li>
-                        <li>
-                            <img src="https://directgharpe.com//assets/user/img/cart.svg" alt="">
-                        </li>
-                        <li>
-                            <img src="https://directgharpe.com//assets/user/img/user.svg" alt="">
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-        
+    @Html.Partial("_MainHeaderBar")
+    
     <div class="container body-content">
         @RenderBody()
     </div>
-    
-    <div style="background: #fff9ef;margin-top:25px;border-top:1px solid #fdecd0;padding: 15px 0;">
-        <div class="container body-content">
-            <div class="row bottom_footer">
-                <div class="col-md-4">
-                    <div class="bottom_footer_wrapper">
-                        <div class="bottom_footer_box">
-                            <div style="width: 30%;height: 85px;">
-                                <img src="https://directgharpe.com//assets/user/img/DirectGharPe_NewLogo2.svg" alt="" height="70">
-                            </div>
-                            <p>We show the products physically, customers can make a choice after checking quality, look &amp; feel.</p>
-                            <ul class="bottom-social-media">
-                                <li>
-                                    <a href="https://www.facebook.com/DirectGharPeShop/" target="_blank">
-                                        <img src="https://directgharpe.com//assets/user/img/social/facebook_color.svg" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com" target="_blank">
-                                        <img src="https://directgharpe.com//assets/user/img/social/twitter_color.svg" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/directgharpe/" target="_blank">
-                                        <img src="https://directgharpe.com//assets/user/img/social/insta_color.svg" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://wa.me/?text=https://directgharpe.com/" target="_blank">
-                                        <img src="https://directgharpe.com//assets/user/img/social/Watsapp_color.svg" alt="">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <h5>Shopping online</h5>
-                    <ul class="footer-online-shopping">
-                        <li><a id="return_link" href="javascript:void(0)">Returns</a></li>
-                        <li><a id="payment_options" href="javascript:void(0)">Payment Options</a></li>
-                        <li><a href="https://directgharpe.com/index.php?/home/contact_us.html">Contact Us</a></li>
-                        <li><a href="https://directgharpe.com/index.php?/home/about_us.html">About Us</a></li>
-                        <li><a href="https://directgharpe.com/index.php?/home/user_policy.html">Terms &amp; Conditions</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-3" style="padding-left: 65px;">
-                    <h5>Information</h5>
-                    <ul class="footer-info">
-                        <li style="display:none;">Gift Cards</li>
-                        <li style="display:none;">Find a store</li>
-                        <li style="display:none;">Newsletter</li>
-                        <li><a href="https://directgharpe.com/index.php?/home/offer_zone.html">Offer Zone</a></li>
-                        <li><a href="https://directgharpe.com/index.php?/home/faq.html">FAQ's</a></li>
-                        <li><a href="https://directgharpe.com/index.php?/home/contact_us.html">Site Feedback</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-3">
-                    <h5>Contact</h5>
-                    <ul class="footer-contact">
-                        <li><a href="https://directgharpe.com/index.php?/home/whatsappmkt.html">WhatsApp Marketing</a></li>
-                        <li><a onclick="on()">How Direct GharPe (DGP) Works?</a></li>
-                        <li><a href="mailto:support@directgharpe.com" target="_top">Email: support@directgharpe.com</a></li>
-                        <li><a href="tel:760 390 9999">Helpline: 760 390 9999</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="copyright">
-        <p class="text-center">Copyright © 2019 Direct GharPe. All Rights Reserved</p>
-    </div>
+        
+    @Html.Partial("_Footer")
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    
     @Scripts.Render("~/bundles/lib")
-    @RenderSection("scripts", required: false)
 
-    <script>
-        $(document).ready(function () {
-
-            $('.slider').bxSlider();
-
-        })
-    </script>
+    @RenderSection("scripts", required: false)        
 </body>
 </html>
