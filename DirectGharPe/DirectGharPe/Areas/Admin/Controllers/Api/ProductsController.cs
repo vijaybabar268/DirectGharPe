@@ -39,6 +39,17 @@ namespace DirectGharPe.Areas.Admin.Controllers.Api
             return product;
         }
 
+        [Route("Api/Products/ProductByCategory/{id}")]
+        [HttpGet]
+        public IEnumerable<Product> ProductByCategory(int id)
+        {
+            var categoryProduct = _context.Products
+                .Where(p => p.IsActive && p.CategoryId == id)
+                .ToList();
+
+            return categoryProduct;
+        }
+
         [HttpPost]
         public Product AddProduct(Product product)
         {

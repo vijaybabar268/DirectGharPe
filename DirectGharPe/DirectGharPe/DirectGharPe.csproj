@@ -187,6 +187,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -403,6 +404,7 @@
     <Content Include="Content\DataTables\swf\flashExport.swf" />
     <Content Include="Content\img\bx_loader.gif" />
     <Content Include="Content\img\controls.png" />
+    <Content Include="Content\img\DirectGharPeLogo.svg" />
     <Content Include="Content\img\subscribe.png" />
     <Content Include="Docs\RequirementDocument.txt" />
     <Content Include="favicon.ico" />
@@ -555,6 +557,8 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Product\Category.cshtml" />
+    <Content Include="Views\Product\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -65,7 +65,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     outline: none !important;
 }
 
-
+.badge {
+    background-color: #bf7503 !important;
+}
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,

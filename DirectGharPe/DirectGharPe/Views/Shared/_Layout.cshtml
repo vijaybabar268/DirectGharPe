@@ -55,32 +55,24 @@
             <div class="row">
                 <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3">
                     <div class="logo">
-                        <a href="">
-                            <img src="https://directgharpe.com//assets/user/img/DirectGharPe_NewLogo.svg" alt="Direct GharPe">
+                        <a href="@Request.Url.GetLeftPart(UriPartial.Authority)">
+                            <img src="~/Content/img/DirectGharPeLogo.svg" alt="Direct GharPe Logo">
                         </a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 text-center">
                     <ul class="main-nav">
                         <li>
-                            <a class="" href="https://directgharpe.com/index.php?/product/product_filter/electronics.html">
-                                Electronics
-                            </a>
+                            @Html.ActionLink("Electronics", "Category", "Product", new { id="1", name= "Electronics" }, null)                            
                         </li>
                         <li>
-                            <a class="" href="https://directgharpe.com/index.php?/product/product_filter/cloathing.html">
-                                Cloathing
-                            </a>
+                            @Html.ActionLink("Cloathing", "Category", "Product", new { id = "2", name = "Cloathing" }, null)                            
                         </li>
                         <li>
-                            <a class="" href="https://directgharpe.com/index.php?/product/product_filter/jewellery.html">
-                                Jewellery
-                            </a>
+                            @Html.ActionLink("Jewellery", "Category", "Product", new { id = "3", name = "Jewellery" }, null)                            
                         </li>
                         <li>
-                            <a class="" href="https://directgharpe.com/index.php?/product/product_filter/fashion.html">
-                                Fashion
-                            </a>
+                            @Html.ActionLink("Fashion", "Category", "Product", new { id = "4", name = "Fashion" }, null)                            
                         </li>
                     </ul>
                 </div>
@@ -100,16 +92,7 @@
             </div>
         </div>
     </div>
-
-    <!-- Dynamic banner -->
-    <div id="banner">
-        <div class="slider">
-            <img src="https://directgharpe.com//assets/user/img/banners/4d2f76ee73a0616ff8f3d7f044c735ed.jpg" width="100%" />
-
-            <img src="https://directgharpe.com//assets/user/img/banners/73b2fd374df2bf568c70b847edbea9b9.jpg" alt="" width="100%" />
-        </div>
-    </div>
-
+        
     <div class="container body-content">
         @RenderBody()
     </div>
