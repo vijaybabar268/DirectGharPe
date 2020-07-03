@@ -402,6 +402,7 @@
     <Content Include="Content\DataTables\images\sort_desc.png" />
     <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
     <Content Include="Content\DataTables\swf\flashExport.swf" />
+    <Content Include="Content\img\avatar.png" />
     <Content Include="Content\img\bx_loader.gif" />
     <Content Include="Content\img\controls.png" />
     <Content Include="Content\img\DirectGharPeLogo.svg" />
