@@ -3,38 +3,45 @@
     ViewBag.Title = "Register";
 }
 
-<h2>@ViewBag.Title.</h2>
+<div class="row">
+    <div class="col-md-12">
+        <div class="my-register-form">
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary("", new { @class = "text-danger" })
 
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-{
-    @Html.AntiForgeryToken()
-    <h4>Create a new account.</h4>
-    <hr />
-    @Html.ValidationSummary("", new { @class = "text-danger" })
-    <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                <div class="avatar">
+                    <img src="~/Content/img/avatar.png" alt="Avatar">
+                </div>
+
+                <h2 class="text-center">Register</h2>
+
+                <div class="form-group">
+                    <input type="text" class="form-control my-form-control" name="name" placeholder="Your Name" required="required">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control my-form-control" name="email" placeholder="Email" required="required">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control my-form-control" name="mobile" placeholder="Mobile" required="required">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control my-form-control" name="password" placeholder="Password" required="required">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control my-form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+                </div>
+                <div class="bottom-action clearfix text-center">
+                    <a href="#" class="float-right"></a>
+                </div>
+            }
         </div>
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Register" />
-        </div>
-    </div>
-}
+</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
