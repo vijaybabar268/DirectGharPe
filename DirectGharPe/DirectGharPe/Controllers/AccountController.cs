@@ -181,6 +181,12 @@ namespace DirectGharPe.Controllers
             return View(model);
         }
 
+        [AllowAnonymous]
+        public ActionResult OTP()
+        {
+            return View();
+        }
+
         //
         // GET: /Account/ConfirmEmail
         [AllowAnonymous]

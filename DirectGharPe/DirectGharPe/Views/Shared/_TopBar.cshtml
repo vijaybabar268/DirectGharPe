@@ -1,4 +1,5 @@
-﻿<!--Top Social Bar-->
+﻿@using Microsoft.AspNet.Identity
+<!--Top Social Bar-->
 <div class="top-navbar">
     <div class="container">
         <div class="row">
@@ -29,10 +30,17 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 text-right">
+            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 text-right" style="padding-right: 0;">
                 <p>
                     <a href="tel:760 390 9999">Customer Care No: 760 390 9999</a>
-                    @Html.ActionLink("Login Now","Login","Account",null,new { style = "padding-left: 20px;" })                    
+                    @if (Request.IsAuthenticated)
+                    {
+                        <span style="padding-left: 25px;">Hi </span> @User.Identity.GetUserName();
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Login Now", "Login", "Account", null, new { style = "padding-left: 20px;" })
+                    }
                 </p>
             </div>
         </div>

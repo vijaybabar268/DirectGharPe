@@ -71,6 +71,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .badge {
     background-color: #bf7503 !important;
 }
+
+.dropdown-menu {
+    box-shadow: none;
+    -webkit-box-shadow: none;    
+}
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
@@ -144,11 +150,11 @@ a:visited {
     margin-right: 0px;
 }
 .main-site {
-    list-style: none;
-    padding: 32px 0;
+    /*list-style: none;*/
+    padding: 25px 0;
 }
 .main-site li {
-    display: inline-block;
+    /*display: inline-block;*/
     margin-right: 20px;
 }
 .main-site li:last-child {    
@@ -163,11 +169,33 @@ a:visited {
 .logo img {
     height: 65px;
 }
-
+.nav > li > a {    
+    padding: 0;
+}
+.navbar-nav > li > a {
+    padding-top: 0;    
+}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #fea620;
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: #fea620;
+    border-color: #fea620;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #000;
+}
+.main-site li ul li {
+    margin-right: 0;
+}
+.main-site li ul {
+    margin-top: 10px !important;
+}
 
 .bg {
     background: #fea620;
-    height:320px;
+    height: 320px;
 }
 .bg2 {
     background: silver;

@@ -1,4 +1,5 @@
-﻿<!--Main Header Bar-->
+﻿@using Microsoft.AspNet.Identity
+<!--Main Header Bar-->
 <div class="main-navbar navbar-inverse">
     <div class="container">
         <div class="row">
@@ -26,16 +27,37 @@
                 </ul>
             </div>
             <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 text-right">
-                <ul class="main-site">
+                <ul class="nav navbar-nav navbar-right main-site">
                     <li>
                         <img src="https://directgharpe.com//assets/user/img/search.svg" alt="">
                     </li>
                     <li>
                         <img src="https://directgharpe.com//assets/user/img/cart.svg" alt="">
                     </li>
-                    <li>
-                        <img src="https://directgharpe.com//assets/user/img/user.svg" alt="">
-                    </li>
+                    @if (Request.IsAuthenticated)
+                    {
+                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <img src="https://directgharpe.com//assets/user/img/user.svg" alt="">
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="@Url.Action("Mine", "Gigs")">My Orders</a></li>
+                                    <li><a href="@Url.Action("Attending", "Gigs")">My Profile</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="javascript:document.getElementById('logoutForm').submit()">Logout</a></li>
+                                </ul>
+                            </li>
+                        }
+                    }
+                    else
+                    {
+                        <li><img src="https://directgharpe.com//assets/user/img/user.svg" alt=""></li>
+                    }
                 </ul>
             </div>
         </div>
