@@ -1,10 +1,11 @@
-﻿
+﻿@model DirectGharPe.ViewModels.CommonViewModel
+
 @{
-    ViewBag.Title = "Product Detail";
+    ViewBag.Title = Model.Title;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Product Detail</h2>
+<h2>@Model.Title</h2>
 
 <div class="row">
     <div class="col-md-4">

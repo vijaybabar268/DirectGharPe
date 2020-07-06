@@ -233,6 +233,9 @@
     <Compile Include="Startup.cs" />
     <Compile Include="Areas\Admin\ViewModels\ProductFormViewModel.cs" />
     <Compile Include="Areas\Admin\ViewModels\ProductPhotoFormViewModel.cs" />
+    <Compile Include="ViewModels\CategoryViewModel.cs" />
+    <Compile Include="ViewModels\CommonViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\aspnet-DirectGharPe-20200627123554.mdf" />

@@ -1,7 +1,8 @@
 ﻿@using Microsoft.AspNet.Identity
+@using DirectGharPe.Models
 <!--Main Header Bar-->
 <div class="main-navbar navbar-inverse">
-    <div class="container">
+    <div class="container" style="padding-right: 30px;">
         <div class="row">
             <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3">
                 <div class="logo">
@@ -11,19 +12,17 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 text-center">
+                                
                 <ul class="main-nav">
-                    <li>
-                        @Html.ActionLink("Electronics", "Category", "Product", new { id = "1", name = "Electronics" }, null)
-                    </li>
-                    <li>
-                        @Html.ActionLink("Cloathing", "Category", "Product", new { id = "2", name = "Cloathing" }, null)
-                    </li>
-                    <li>
-                        @Html.ActionLink("Jewellery", "Category", "Product", new { id = "3", name = "Jewellery" }, null)
-                    </li>
-                    <li>
-                        @Html.ActionLink("Fashion", "Category", "Product", new { id = "4", name = "Fashion" }, null)
-                    </li>
+                    @if (Model != null)
+                    {
+                        foreach (Category category in Model.Categories)
+                        {
+                            <li>
+                                @Html.ActionLink(category.Name, "Category", "Product", new { id = category.Id, name = category.Name }, null)
+                            </li>
+                        }
+                    }
                 </ul>
             </div>
             <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 text-right">

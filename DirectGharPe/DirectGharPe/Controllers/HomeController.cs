@@ -1,16 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using DirectGharPe.Models;
+using DirectGharPe.ViewModels;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace DirectGharPe.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ApplicationDbContext _context;
+
+        public HomeController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         public ActionResult Index()
         {
-            return View();
+            var viewModel = new CommonViewModel()
+            {
+                Categories = _context.Categories.Where(c => c.ParentId == 0).ToList(),
+                Title = null
+            };
+
+            return View(viewModel);
         }
 
         public ActionResult About()
