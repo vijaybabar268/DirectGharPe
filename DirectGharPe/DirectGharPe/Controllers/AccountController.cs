@@ -2,6 +2,7 @@
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -150,8 +151,9 @@ namespace DirectGharPe.Controllers
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { 
-                    UserName = model.Email, 
-                    Email = model.Email 
+                    UserName = model.UserName, 
+                    Email = model.Email,
+                    PhoneNumber = model.PhoneNumber
                 };
 
                 var result = await UserManager.CreateAsync(user, model.Password);
@@ -164,15 +166,48 @@ namespace DirectGharPe.Controllers
                     //await roleManager.CreateAsync(new IdentityRole("Admin"));
                     //await UserManager.AddToRoleAsync(user.Id, "Admin");
 
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+                    //await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    //string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                    //var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                    //await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("Index", "Home");
+                    // OTP 
+                    // Generating an OTP
+                    var random = new Random();
+                    var otp = random.Next(1000, 9999);
+
+                    // Sending an OTP                                        
+                    //IEnumerable<KeyValuePair<string, string>> queries = new List<KeyValuePair<string, string>>()
+                    //{
+                    //    new KeyValuePair<string, string>("authkey","298730AoeIboTjH5da4143e"),
+                    //    new KeyValuePair<string, string>("mobiles","9619331535"),
+                    //    new KeyValuePair<string, string>("message","Your OTP is " + otp),
+                    //    new KeyValuePair<string, string>("sender", "DGharp"),
+                    //    new KeyValuePair<string, string>("route", "4")                        
+                    //};
+                    //HttpContent q = new FormUrlEncodedContent(queries);
+                    //using (HttpClient client = new HttpClient())
+                    //{
+                    //    using (HttpResponseMessage res = await client.PostAsync("http://api.msg91.com/api/v2/sendsms", q))
+                    //    {
+                    //        using (HttpContent content = res.Content)
+                    //        {
+                    //            var myContent = content.ReadAsStringAsync();
+                    //            HttpContentHeaders headers = content.Headers;
+
+                    //            Console.WriteLine(myContent);
+                    //        }
+                    //    }
+                    //}
+
+                    // Saving OTP Temp
+                    Session["OTP"] = otp;
+                    Session["USER"] = user;
+
+                    return RedirectToAction("OTP", "Account");
                 }
                 AddErrors(result);
             }
@@ -184,7 +219,28 @@ namespace DirectGharPe.Controllers
         [AllowAnonymous]
         public ActionResult OTP()
         {
-            return View();
+            var viewModel = new VerifyOTPViewModel();
+
+            return View("OTP", viewModel);
+        }
+
+        [AllowAnonymous]
+        public async Task<ActionResult> VerifyOTP(VerifyOTPViewModel viewModel)
+        {
+            if (!ModelState.IsValid)            
+                return View("OTP", viewModel);
+
+            if (!string.IsNullOrWhiteSpace(viewModel.OTP))
+            {
+                if (viewModel.OTP == Session["OTP"].ToString())
+                {
+                    await SignInManager.SignInAsync((ApplicationUser)Session["USER"], isPersistent: false, rememberBrowser: false);
+
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+
+            return RedirectToAction("Login", "Register");
         }
 
         //
@@ -407,6 +463,9 @@ namespace DirectGharPe.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+
+            Session.Remove("OTP");
+            Session.Remove("USER");
             
             return RedirectToAction("Index", "Home");
         }

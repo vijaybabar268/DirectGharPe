@@ -65,9 +65,17 @@ namespace DirectGharPe.Models
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name = "Your Name")]
+        public string UserName { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
+
+        [Required]
+        [Display(Name = "Mobile")]
+        public string PhoneNumber { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
@@ -108,5 +116,11 @@ namespace DirectGharPe.Models
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
+    }
+
+    public class VerifyOTPViewModel
+    {
+        [Required]        
+        public string OTP { get; set; }
     }
 }

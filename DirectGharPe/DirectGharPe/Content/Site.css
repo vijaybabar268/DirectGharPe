@@ -312,6 +312,15 @@ a:visited {
     width: 98.5%;
 }
 
+.validation-summary-errors ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    color: red;
+}
+.text-danger {
+    color: red;
+}
 
 /* Login form style*/
 .my-form-control {
@@ -344,7 +353,7 @@ a:visited {
 }
 .my-login-form h2 {
 	font-size: 22px;
-	margin: 35px 0 25px;
+	margin: 35px 0 15px;
 }
 .my-login-form .avatar {
 	position: absolute;

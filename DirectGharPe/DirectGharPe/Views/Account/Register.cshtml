@@ -9,7 +9,6 @@
             @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { role = "form" }))
             {
                 @Html.AntiForgeryToken()
-                @Html.ValidationSummary("", new { @class = "text-danger" })
 
                 <div class="avatar">
                     <img src="~/Content/img/avatar.png" alt="Avatar">
@@ -17,32 +16,45 @@
 
                 <h2 class="text-center">Register</h2>
 
+                @Html.ValidationSummary(true)
+
                 <div class="form-group">
-                    <input type="text" class="form-control my-form-control" name="name" placeholder="Your Name" required="required">
+                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control my-form-control", placeholder = "Your Name" })
+                    @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })    
                 </div>
+
                 <div class="form-group">
-                    <input type="text" class="form-control my-form-control" name="email" placeholder="Email" required="required">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control my-form-control", placeholder = "Email" })
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                 </div>
+
                 <div class="form-group">
-                    <input type="text" class="form-control my-form-control" name="mobile" placeholder="Mobile" required="required">
+                    @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control my-form-control", placeholder = "Mobile" })
+                    @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger" })
                 </div>
+
                 <div class="form-group">
-                    <input type="password" class="form-control my-form-control" name="password" placeholder="Password" required="required">
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control my-form-control", placeholder = "Password" })
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                 </div>
+
                 <div class="form-group">
-                    <input type="password" class="form-control my-form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control my-form-control", placeholder = "Confirm Password" })
+                    @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
                 </div>
+
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
                 </div>
+
                 <div class="bottom-action clearfix text-center">
                     <a href="#" class="float-right"></a>
                 </div>
             }
         </div>
-        <p class="text-center small">            
+        @*<p class="text-center small">            
             @Html.ActionLink("OTP", "OTP", "Account")
-        </p>
+        </p>*@
     </div>
 </div>
 
