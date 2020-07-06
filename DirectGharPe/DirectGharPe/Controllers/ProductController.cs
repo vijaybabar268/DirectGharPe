@@ -5,7 +5,7 @@ using System.Web.Mvc;
 
 namespace DirectGharPe.Controllers
 {
-    public class ProductController : Controller
+    public class ProductController : BaseController
     {
         private readonly ApplicationDbContext _context;
 
@@ -21,7 +21,7 @@ namespace DirectGharPe.Controllers
 
         public ActionResult Category(string id, string name)
         {            
-            var viewModel = new CommonViewModel()
+            var viewModel = new CategoryViewModel()
             {
                 Categories = _context.Categories.Where(c => c.ParentId == 0).ToList(),
                 Title = name                
@@ -32,7 +32,7 @@ namespace DirectGharPe.Controllers
 
         public ActionResult Detail(string id)
         {
-            var viewModel = new CommonViewModel()
+            var viewModel = new CategoryViewModel()
             {
                 Categories = _context.Categories.Where(c => c.ParentId == 0).ToList(),
                 Title = "Product Detail"

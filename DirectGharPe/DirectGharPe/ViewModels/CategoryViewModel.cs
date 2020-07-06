@@ -1,7 +1,11 @@
-﻿namespace DirectGharPe.ViewModels
+﻿using DirectGharPe.Models;
+using System.Collections.Generic;
+
+namespace DirectGharPe.ViewModels
 {
-    public class CategoryViewModel
+    public class CategoryViewModel : BaseViewModel
     {
-        
+        public IEnumerable<Category> Categories { get; set; }
+        public string Title { get; set; }
     }
 }

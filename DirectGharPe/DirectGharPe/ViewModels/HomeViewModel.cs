@@ -1,6 +1,6 @@
 ﻿namespace DirectGharPe.ViewModels
 {
-    public class HomeViewModel
+    public class HomeViewModel : BaseViewModel
     {        
         
     }

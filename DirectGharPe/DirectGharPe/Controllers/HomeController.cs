@@ -1,11 +1,10 @@
 ﻿using DirectGharPe.Models;
 using DirectGharPe.ViewModels;
-using System.Linq;
 using System.Web.Mvc;
 
 namespace DirectGharPe.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly ApplicationDbContext _context;
 
@@ -21,10 +20,9 @@ namespace DirectGharPe.Controllers
 
         public ActionResult Index()
         {
-            var viewModel = new CommonViewModel()
+            var viewModel = new HomeViewModel()
             {
-                Categories = _context.Categories.Where(c => c.ParentId == 0).ToList(),
-                Title = null
+                
             };
 
             return View(viewModel);

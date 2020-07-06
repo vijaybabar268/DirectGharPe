@@ -1,4 +1,4 @@
-﻿@model DirectGharPe.ViewModels.CommonViewModel
+﻿@model DirectGharPe.ViewModels.BaseViewModel
 
 <!DOCTYPE html>
 <html>
@@ -12,7 +12,7 @@
 <body>
     @Html.Partial("_TopBar")
 
-    @Html.Partial("_MainHeaderBar")
+    @Html.Partial("_MainHeaderBar", Model.MainCategory)
 
     <div class="container body-content min-content">
         @RenderBody()

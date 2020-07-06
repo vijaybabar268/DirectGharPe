@@ -14,14 +14,11 @@
             <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 text-center">
                                 
                 <ul class="main-nav">
-                    @if (Model != null)
+                    @foreach (Category category in Model)
                     {
-                        foreach (Category category in Model.Categories)
-                        {
-                            <li>
-                                @Html.ActionLink(category.Name, "Category", "Product", new { id = category.Id, name = category.Name }, null)
-                            </li>
-                        }
+                        <li>
+                            @Html.ActionLink(category.Name, "Category", "Product", new { id = category.Id, name = category.Name }, null)
+                        </li>
                     }
                 </ul>
             </div>
