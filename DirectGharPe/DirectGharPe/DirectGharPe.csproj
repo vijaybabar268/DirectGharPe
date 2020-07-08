@@ -220,6 +220,10 @@
     <Compile Include="Migrations\202006301347314_AddedPhotoToProduct.Designer.cs">
       <DependentUpon>202006301347314_AddedPhotoToProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007081545466_AddedDiscountedPriceFeature.cs" />
+    <Compile Include="Migrations\202007081545466_AddedDiscountedPriceFeature.Designer.cs">
+      <DependentUpon>202007081545466_AddedDiscountedPriceFeature.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -608,6 +612,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006301347314_AddedPhotoToProduct.resx">
       <DependentUpon>202006301347314_AddedPhotoToProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007081545466_AddedDiscountedPriceFeature.resx">
+      <DependentUpon>202007081545466_AddedDiscountedPriceFeature.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

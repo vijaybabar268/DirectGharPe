@@ -60,7 +60,11 @@
                         }
                     },                    
                     {
-                        data: "price"
+                        data: "price",
+                        render: function (data, type, product) {
+                            debugger
+                            return '₹ <strike>' + product.priceBefore + '</strike> ₹ ' + product.price + ' ' + product.discount + '% Off, Save ₹ ' + product.save;
+                        }
                     },
                     {
                         data: "quantity"

@@ -10,9 +10,15 @@ namespace DirectGharPe.Areas.Admin.ViewModels
         public string Name { get; set; }
         
         public string Description { get; set; }
-        
+
+        public decimal? PriceBefore { get; set; }
+
+        public decimal? Discount { get; set; }
+
         public decimal? Price { get; set; }
-        
+
+        public decimal? Save { get; set; }
+
         public byte? Quantity { get; set; }
         
         public int Category { get; set; }

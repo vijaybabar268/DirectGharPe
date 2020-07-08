@@ -41,7 +41,10 @@ namespace DirectGharPe.Areas.Admin.Controllers
                 {
                     Name = viewModel.Name,
                     Description = viewModel.Description,
+                    PriceBefore = viewModel.PriceBefore,
+                    Discount = viewModel.Discount,
                     Price = viewModel.Price,
+                    Save = viewModel.Save,
                     Quantity = viewModel.Quantity,
                     Slug = viewModel.Slug,
                     IsActive = true,
@@ -61,7 +64,10 @@ namespace DirectGharPe.Areas.Admin.Controllers
 
                 productInDb.Name = viewModel.Name;
                 productInDb.Description = viewModel.Description;
+                productInDb.PriceBefore = viewModel.PriceBefore;
+                productInDb.Discount = viewModel.Discount;
                 productInDb.Price = viewModel.Price;
+                productInDb.Save = viewModel.Save;
                 productInDb.Quantity = viewModel.Quantity;
                 productInDb.Slug = viewModel.Slug;
                 productInDb.DateModified = DateTime.Now;
@@ -103,7 +109,10 @@ namespace DirectGharPe.Areas.Admin.Controllers
                 Id = id,
                 Name = product.Name,
                 Description = product.Description,
+                PriceBefore = product.PriceBefore,
+                Discount = product.Discount,
                 Price = product.Price,
+                Save = product.Save,
                 Quantity = product.Quantity,                
                 Categories = _context.Categories.Where(c => c.IsActive == true).ToList(),
                 Brands = _context.Brands.Where(c => c.IsActive == true).ToList(),

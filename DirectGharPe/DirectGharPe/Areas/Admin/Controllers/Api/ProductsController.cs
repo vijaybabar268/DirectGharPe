@@ -79,7 +79,10 @@ namespace DirectGharPe.Areas.Admin.Controllers.Api
 
             productInDb.Name = product.Name;
             productInDb.Description = product.Description;
+            productInDb.PriceBefore = product.PriceBefore;
+            productInDb.Discount = product.Discount;
             productInDb.Price = product.Price;
+            productInDb.Save = product.Save;
             productInDb.Quantity = product.Quantity;
             productInDb.Slug = product.Name.Trim().ToLower().Replace(' ', '-');
             productInDb.IsActive = product.IsActive;

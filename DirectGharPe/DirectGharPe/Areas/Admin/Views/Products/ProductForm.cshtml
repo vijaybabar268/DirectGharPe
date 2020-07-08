@@ -18,8 +18,20 @@
         @Html.TextAreaFor(m => m.Description, new { @class = "form-control" })
     </div>
     <div class="form-group">
+        @Html.LabelFor(m => m.PriceBefore)
+        @Html.TextBoxFor(m => m.PriceBefore, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Discount)
+        @Html.TextBoxFor(m => m.Discount, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
         @Html.LabelFor(m => m.Price)
         @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Save)
+        @Html.TextBoxFor(m => m.Save, new { @class = "form-control" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Quantity)

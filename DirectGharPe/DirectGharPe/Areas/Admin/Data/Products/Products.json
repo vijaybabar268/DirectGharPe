@@ -1,41 +1,61 @@
 [
   {
     "name": "Samsung Galaxy A50s",
-    "description": "Android v9.0 (Pie), 2.3 GHz Octa Core, 4 GB RAM, 128 GB Storage, 6.4&quot; (16.26 cm) Display, 4000 mAh Battery, 48 MP Rear Camera, 32 MP Front Camera, VoLTE, Dual SIM.",
     "price": "21849",
     "quantity": "100",
+    "description": "Android v9.0 (Pie), 2.3 GHz Octa Core, 4 GB RAM, 128 GB Storage, 6.4&quot; (16.26 cm) Display, 4000 mAh Battery, 48 MP Rear Camera, 32 MP Front Camera, VoLTE, Dual SIM.",
+    "PriceBefore": "24034",
+    "Discount": "10",
+    "Price": "21849",
+    "Save": "2185",
     "categoryId": "20",
     "brandId": "1"
   },
   {
     "name": "Samsung Galaxy A70",
-    "description": "Android v9.0 (Pie), 2 GHz Octa Core, 6 GB RAM, 128 GB Storage, 6.7&quot; (17.02 cm) Display, 4500 mAh Battery, 32 MP Rear Camera, 32 MP Front Camera, VoLTE, Dual SIM",
     "price": "25641",
     "quantity": "100",
+    "description": "Android v9.0 (Pie), 2 GHz Octa Core, 6 GB RAM, 128 GB Storage, 6.7&quot; (17.02 cm) Display, 4500 mAh Battery, 32 MP Rear Camera, 32 MP Front Camera, VoLTE, Dual SIM",
+    "PriceBefore": "27239",
+    "Discount": "9",
+    "Price": "24990",
+    "Save": "2249",
     "categoryId": "20",
     "brandId": "1"
   },
   {
-    "name": "Samsung Galaxy Note 10",
-    "description": "Android v9.0 (Pie), 2.73 GHz Octa Core, 12 GB RAM, 512 GB Storage, 6.8&quot; (17.27 cm) Display, 4300 mAh Battery, 12 MP Rear Camera, 10 MP Front Camera, VoLTE, Dual SIM",
+    "name": "Samsung Galaxy Note 10 Plus 512GB",
     "price": "75999",
     "quantity": "100",
+    "description": "Android v9.0 (Pie), 2.73 GHz Octa Core, 12 GB RAM, 512 GB Storage, 6.8&quot; (17.27 cm) Display, 4300 mAh Battery, 12 MP Rear Camera, 10 MP Front Camera, VoLTE, Dual SIM",
+    "PriceBefore": "79799",
+    "Discount": "5",
+    "Price": "75999",
+    "Save": "3800",
     "categoryId": "20",
     "brandId": "1"
   },
   {
     "name": "Samsung Galaxy A30",
-    "description": "Android v9.0 (Pie), 1.8 GHz Octa Core, 4 GB RAM, 64 GB Storage, 6.4&quot; (16.26 cm) Display, 4000 mAh Battery, 16 MP Rear Camera, 16 MP Front Camera, VoLTE, Dual SIM",
     "price": "14431",
     "quantity": "100",
+    "description": "Android v9.0 (Pie), 1.8 GHz Octa Core, 4 GB RAM, 64 GB Storage, 6.4&quot; (16.26 cm) Display, 4000 mAh Battery, 16 MP Rear Camera, 16 MP Front Camera, VoLTE, Dual SIM",
+    "PriceBefore": "14690",
+    "Discount": "5",
+    "Price": "13990",
+    "Save": "700",
     "categoryId": "20",
     "brandId": "1"
   },
   {
     "name": "Samsung Galaxy S10",
-    "description": "Android v9.0 (Pie), 2.73 GHz Octa Core, 8 GB RAM, 512 GB Storage, 6.4&quot; (16.26 cm) Display, 4100 mAh Battery, 12 MP Rear Camera, 10 MP Front Camera, VoLTE, Dual SIM",
     "price": "83505",
     "quantity": "100",
+    "description": "Android v9.0 (Pie), 2.73 GHz Octa Core, 8 GB RAM, 512 GB Storage, 6.4&quot; (16.26 cm) Display, 4100 mAh Battery, 12 MP Rear Camera, 10 MP Front Camera, VoLTE, Dual SIM",
+    "PriceBefore": "86010",
+    "Discount": "3",
+    "Price": "83505",
+    "Save": "2505",
     "categoryId": "20",
     "brandId": "1"
   }
