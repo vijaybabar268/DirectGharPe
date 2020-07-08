@@ -3,6 +3,7 @@
 
 @{
     ViewBag.Title = "OTP";
+    //Layout = null;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -17,7 +18,7 @@
                 <div class="avatar">
                     <img src="~/Content/img/avatar.png" alt="Avatar">
                 </div>
-
+                @Session["OTP"].ToString()
                 <h2 class="text-center">OTP</h2>
 
                 <div class="form-group">

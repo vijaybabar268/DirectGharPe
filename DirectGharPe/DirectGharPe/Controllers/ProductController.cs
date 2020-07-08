@@ -5,7 +5,7 @@ using System.Web.Mvc;
 
 namespace DirectGharPe.Controllers
 {
-    public class ProductController : BaseController
+    public class ProductController : Controller
     {
         private readonly ApplicationDbContext _context;
 

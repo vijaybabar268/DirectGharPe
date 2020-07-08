@@ -14,12 +14,17 @@
             <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 text-center">
                                 
                 <ul class="main-nav">
-                    @foreach (Category category in Model)
-                    {
-                        <li>
-                            @Html.ActionLink(category.Name, "Category", "Product", new { id = category.Id, name = category.Name }, null)
-                        </li>
-                    }
+                    @{
+                        if (Session["MainCategory"] != null)
+                        {
+                            foreach (Category category in ((IEnumerable<Category>)Session["MainCategory"]))
+                            {
+                                <li>
+                                    @Html.ActionLink(category.Name, "Category", "Product", new { id = category.Id, name = category.Name }, null)
+                                </li>
+                            }
+                        }
+                    }                    
                 </ul>
             </div>
             <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 text-right">

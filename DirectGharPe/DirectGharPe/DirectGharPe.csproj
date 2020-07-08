@@ -410,6 +410,7 @@
     <Content Include="Content\img\bx_loader.gif" />
     <Content Include="Content\img\controls.png" />
     <Content Include="Content\img\DirectGharPeLogo.svg" />
+    <Content Include="Content\img\no-image-available.jpg" />
     <Content Include="Content\img\subscribe.png" />
     <Content Include="Scripts\js\common.js" />
     <Content Include="Docs\RequirementDocument.txt" />

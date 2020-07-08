@@ -56,7 +56,13 @@ namespace DirectGharPe.Controllers
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
-            return View();
+
+            var viewModel = new LoginViewModel()
+            {
+                
+            };
+
+            return View(viewModel);
         }
 
         //
@@ -70,6 +76,11 @@ namespace DirectGharPe.Controllers
             {
                 return View(model);
             }
+
+            var viewModel = new LoginViewModel()
+            {
+
+            };
 
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
@@ -138,6 +149,11 @@ namespace DirectGharPe.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            var viewModel = new RegisterViewModel()
+            {
+
+            };
+
             return View();
         }
 
@@ -219,7 +235,10 @@ namespace DirectGharPe.Controllers
         [AllowAnonymous]
         public ActionResult OTP()
         {
-            var viewModel = new VerifyOTPViewModel();
+            var viewModel = new VerifyOTPViewModel() 
+            { 
+            
+            };
 
             return View("OTP", viewModel);
         }
@@ -466,7 +485,12 @@ namespace DirectGharPe.Controllers
 
             Session.Remove("OTP");
             Session.Remove("USER");
-            
+
+            var viewModel = new LogOffViewModel()
+            {
+
+            };
+
             return RedirectToAction("Index", "Home");
         }
 

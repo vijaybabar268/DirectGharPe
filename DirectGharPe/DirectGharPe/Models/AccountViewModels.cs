@@ -47,7 +47,7 @@ namespace DirectGharPe.Models
     }
 
     public class LoginViewModel
-    {
+    {        
         [Required]
         [Display(Name = "Email")]
         [EmailAddress]
@@ -122,5 +122,10 @@ namespace DirectGharPe.Models
     {
         [Required]        
         public string OTP { get; set; }
+    }
+
+    public class LogOffViewModel
+    {
+        
     }
 }

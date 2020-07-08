@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DirectGharPe.ViewModels
 {
-    public class CategoryViewModel : BaseViewModel
+    public class CategoryViewModel
     {
         public IEnumerable<Category> Categories { get; set; }
         public string Title { get; set; }
