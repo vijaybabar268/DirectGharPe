@@ -103,6 +103,10 @@ h6,
     border-color: #FF4342;
 }
 
+.imageContainer{
+    text-align: center;
+}
+
 .imageContainer > img {
     transition: transform 0.50s ease;
 }

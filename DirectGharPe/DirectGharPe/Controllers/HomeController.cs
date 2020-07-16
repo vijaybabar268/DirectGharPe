@@ -25,7 +25,9 @@ namespace DirectGharPe.Controllers
             var viewModel = new HomeViewModel()
             {                
                 topSellerElectronics = _context.Products
-                                        .Where(c => c.CategoryId == 1).Take(4).ToList(),
+                                        .Where(c => c.CategoryId == 20).Take(4)
+                                        .Include(x=>x.Photo)
+                                        .ToList(),
 
                 topSellerCloating = _context.Products.Where(c => c.CategoryId == 2).Take(4)
                                         .Include(p => p.Photo).ToList(),

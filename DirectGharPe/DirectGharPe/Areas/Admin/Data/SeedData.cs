@@ -11,26 +11,7 @@ namespace DirectGharPe.Areas.Admin.Data
         public static void Data(ApplicationDbContext _context)
         {
             try
-            {
-                // Import Product data.
-                if (!_context.Products.Any())
-                {
-                    var productData =
-                        System.IO.File.ReadAllText("D:\\Work\\Projects\\DirectGharPe\\DirectGharPe\\DirectGharPe\\Areas\\Admin\\Data\\Products\\Products.json");
-                    var products = JsonConvert.DeserializeObject<List<Product>>(productData);
-
-                    foreach (var product in products)
-                    {
-                        product.IsActive = true;
-                        product.Slug = product.Name.Trim().ToLower().Replace(' ', '-');
-                        product.DateAdded = DateTime.Now;
-
-                        _context.Products.Add(product);
-                    }
-
-                    _context.SaveChanges();
-                }
-
+            {               
                 // Import category data.
                 if (!_context.Categories.Any())
                 {
@@ -58,6 +39,25 @@ namespace DirectGharPe.Areas.Admin.Data
                     {
                         brand.IsActive = true;
                         _context.Brands.Add(brand);
+                    }
+
+                    _context.SaveChanges();
+                }
+
+                // Import Product data.
+                if (!_context.Products.Any())
+                {
+                    var productData =
+                        System.IO.File.ReadAllText("D:\\Work\\Projects\\DirectGharPe\\DirectGharPe\\DirectGharPe\\Areas\\Admin\\Data\\Products\\Products.json");
+                    var products = JsonConvert.DeserializeObject<List<Product>>(productData);
+
+                    foreach (var product in products)
+                    {
+                        product.IsActive = true;
+                        product.Slug = product.Name.Trim().ToLower().Replace(' ', '-');
+                        product.DateAdded = DateTime.Now;
+
+                        _context.Products.Add(product);
                     }
 
                     _context.SaveChanges();

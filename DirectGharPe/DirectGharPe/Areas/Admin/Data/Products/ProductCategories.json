@@ -21,8 +21,8 @@
   },
   {
     "Id": 5,
-    "Name": "Mobile Phones",
-    "ParentId": 1
+    "Name": "Traditional Kurta",
+    "ParentId": 2
   },
   {
     "Id": 6,
@@ -96,8 +96,8 @@
   },
   {
     "Id": 20,
-    "Name": "Traditional Kurta",
-    "ParentId": 2
+    "Name": "Mobile Phones",
+    "ParentId": 1
   },
   {
     "Id": 21,

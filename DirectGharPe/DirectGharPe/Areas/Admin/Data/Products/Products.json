@@ -1,62 +1,338 @@
+/*Electronics (20,51,55,56,58) (Mobile Phones, CCTV CAMERA, Camera (No DGP), Camera Accessories (No DGP), Laptop (No DGP))*/
+/*SELECT name, description,quantity,price_before_discount,price_after_discount,discount_in_percent,you_save,categoryId,brand FROM `ocmv_product` where categoryId = 20 and brand = 'Apple'*/
 [
   {
-    "name": "Samsung Galaxy A50s",
-    "price": "21849",
-    "quantity": "100",
-    "description": "Android v9.0 (Pie), 2.3 GHz Octa Core, 4 GB RAM, 128 GB Storage, 6.4&quot; (16.26 cm) Display, 4000 mAh Battery, 48 MP Rear Camera, 32 MP Front Camera, VoLTE, Dual SIM.",
+    "Name": "Samsung Galaxy A50s",
+    "Description": "Android v9.0 (Pie), 2.3 GHz Octa Core, 4 GB RAM, 128 GB Storage, 6.4&quot; (16.26 cm) Display, 4000 mAh Battery, 48 MP Rear Camera, 32 MP Front Camera, VoLTE, Dual SIM",
+    "Quantity": "100",
     "PriceBefore": "24034",
-    "Discount": "10",
     "Price": "21849",
+    "Discount": "10",
     "Save": "2185",
-    "categoryId": "20",
-    "brandId": "1"
+    "CategoryId": "20",
+    "BrandId": "1"
   },
   {
-    "name": "Samsung Galaxy A70",
-    "price": "25641",
-    "quantity": "100",
-    "description": "Android v9.0 (Pie), 2 GHz Octa Core, 6 GB RAM, 128 GB Storage, 6.7&quot; (17.02 cm) Display, 4500 mAh Battery, 32 MP Rear Camera, 32 MP Front Camera, VoLTE, Dual SIM",
+    "Name": "Samsung Galaxy A70",
+    "Description": "Android v9.0 (Pie), 2 GHz Octa Core, 6 GB RAM, 128 GB Storage, 6.7&quot; (17.02 cm) Display, 4500 mAh Battery, 32 MP Rear Camera, 32 MP Front Camera, VoLTE, Dual SIM",
+    "Quantity": "100",
     "PriceBefore": "27239",
-    "Discount": "9",
     "Price": "24990",
+    "Discount": "9",
     "Save": "2249",
-    "categoryId": "20",
-    "brandId": "1"
+    "CategoryId": "20",
+    "BrandId": "1"
   },
   {
-    "name": "Samsung Galaxy Note 10 Plus 512GB",
-    "price": "75999",
-    "quantity": "100",
-    "description": "Android v9.0 (Pie), 2.73 GHz Octa Core, 12 GB RAM, 512 GB Storage, 6.8&quot; (17.27 cm) Display, 4300 mAh Battery, 12 MP Rear Camera, 10 MP Front Camera, VoLTE, Dual SIM",
+    "Name": "Samsung Galaxy Note 10 Plus 512GB",
+    "Description": "Android v9.0 (Pie), 2.73 GHz Octa Core, 12 GB RAM, 512 GB Storage, 6.8&quot; (17.27 cm) Display, 4300 mAh Battery, 12 MP Rear Camera, 10 MP Front Camera, VoLTE, Dual SIM",
+    "Quantity": "100",
     "PriceBefore": "79799",
-    "Discount": "5",
     "Price": "75999",
-    "Save": "3800",
-    "categoryId": "20",
-    "brandId": "1"
-  },
-  {
-    "name": "Samsung Galaxy A30",
-    "price": "14431",
-    "quantity": "100",
-    "description": "Android v9.0 (Pie), 1.8 GHz Octa Core, 4 GB RAM, 64 GB Storage, 6.4&quot; (16.26 cm) Display, 4000 mAh Battery, 16 MP Rear Camera, 16 MP Front Camera, VoLTE, Dual SIM",
-    "PriceBefore": "14690",
     "Discount": "5",
-    "Price": "13990",
-    "Save": "700",
-    "categoryId": "20",
-    "brandId": "1"
+    "Save": "3800",
+    "CategoryId": "20",
+    "BrandId": "1"
   },
   {
-    "name": "Samsung Galaxy S10",
-    "price": "83505",
-    "quantity": "100",
-    "description": "Android v9.0 (Pie), 2.73 GHz Octa Core, 8 GB RAM, 512 GB Storage, 6.4&quot; (16.26 cm) Display, 4100 mAh Battery, 12 MP Rear Camera, 10 MP Front Camera, VoLTE, Dual SIM",
+    "Name": "Samsung Galaxy A30",
+    "Description": "Android v9.0 (Pie), 1.8 GHz Octa Core, 4 GB RAM, 64 GB Storage, 6.4&quot; (16.26 cm) Display, 4000 mAh Battery, 16 MP Rear Camera, 16 MP Front Camera, VoLTE, Dual SIM",
+    "Quantity": "100",
+    "PriceBefore": "14690",
+    "Price": "13990",
+    "Discount": "5",
+    "Save": "700",
+    "CategoryId": "20",
+    "BrandId": "1"
+  },
+  {
+    "Name": "Samsung Galaxy S10 plus 512GB",
+    "Description": "Android v9.0 (Pie), 2.73 GHz Octa Core, 8 GB RAM, 512 GB Storage, 6.4&quot; (16.26 cm) Display, 4100 mAh Battery, 12 MP Rear Camera, 10 MP Front Camera, VoLTE, Dual SIM",
+    "Quantity": "100",
     "PriceBefore": "86010",
-    "Discount": "3",
     "Price": "83505",
+    "Discount": "3",
     "Save": "2505",
-    "categoryId": "20",
-    "brandId": "1"
+    "CategoryId": "20",
+    "BrandId": "1"
+  },
+  {
+    "Name": "Samsung Galaxy M30",
+    "Description": "Android v8.1 (Oreo), 1.8 GHz Octa Core, 4 GB RAM, 64 GB Storage, 6.4&quot; (16.26 cm) Display, 5000 mAh Battery, 13 MP Rear Camera, 16 MP Front Camera, VoLTE, Dual SIM",
+    "Quantity": "",
+    "PriceBefore": "",
+    "Price": "",
+    "Discount": "",
+    "Save": "",
+    "CategoryId": "20",
+    "BrandId": "1"
+  },
+  {
+    "Name": "Samsung Galaxy A50",
+    "Description": "Android v9.0 (Pie), 2.3 GHz Octa Core, 4 GB RAM, 64 GB Storage, 6.4&quot; (16.26 cm) Display, 4000 mAh Battery, 25 MP Rear Camera, 25 MP Front Camera, VoLTE, Dual SIM",
+    "Quantity": "",
+    "PriceBefore": "",
+    "Price": "",
+    "Discount": "",
+    "Save": "",
+    "CategoryId": "20",
+    "BrandId": "1"
+  },
+  {
+    "Name": "Samsung Galaxy M40",
+    "Description": "Android v9.0 (Pie), 2 GHz Octa Core, 6 GB RAM, 128 GB Storage, 6.3&quot; (16 cm) Display, 3500 mAh Battery, 32 MP Rear Camera, 16 MP Front Camera, VoLTE, Dual SIM",
+    "Quantity": "",
+    "PriceBefore": "",
+    "Price": "",
+    "Discount": "",
+    "Save": "",
+    "CategoryId": "20",
+    "BrandId": "1"
+  },
+  {
+    "Name": "Samsung Galaxy A60",
+    "Description": "Android v9.0 (Pie), 2 GHz Octa Core, 6 GB RAM, 128 GB Storage, 6.3&quot; (16 cm) Display, 3500 mAh Battery, 32 MP Rear Camera, 16 MP Front Camera, VoLTE, Dual SIM",
+    "Quantity": "",
+    "PriceBefore": "",
+    "Price": "",
+    "Discount": "",
+    "Save": "",
+    "CategoryId": "20",
+    "BrandId": "1"
+  },
+  {
+    "Name": "Samsung Galaxy M20 64GB",
+    "Description": "Android v8.1 (Oreo), 1.8 GHz Octa Core, 4 GB RAM, 64 GB Storage, 6.3&quot; (16 cm) Display, 5000 mAh Battery, 13 MP Rear Camera, 8 MP Front Camera, VoLTE, Dual SIM",
+    "Quantity": "",
+    "PriceBefore": "",
+    "Price": "",
+    "Discount": "",
+    "Save": "",
+    "CategoryId": "20",
+    "BrandId": "1"
+  },
+  {
+    "Name": "Samsung Galaxy A10s (Blue, 2GB RAM, 32GB Storage)",
+    "Description": "13MP + 2MP rear camera | 8MP front facing camera, 15.79 centimeters (6.2-inch) HD + capacitive touchscreen with 720 x 1560 pixels resolution 16M color support, Memory Storage - 2GB RAM | 32GB storage expandable up to 512GB | Dual nano SIM with dual standby (4G+4G), Android v9 Pie operating system with 2GHz + 1.5GHz MediaTek MT6762 octa core processor, 4000mAH lithium-ion battery",
+    "Quantity": "",
+    "PriceBefore": "",
+    "Price": "",
+    "Discount": "",
+    "Save": "",
+    "CategoryId": "20",
+    "BrandId": "1"
+  },
+
+
+
+
+  {
+    "Name": "Vivo S1",
+    "Description": "Android v9.0 (Pie), 2 GHz Octa Core, 4 GB RAM, 128 GB Storage, 6.38&quot; (16.21 cm) Display, 4500 mAh Battery, 16 MP Rear Camera, 32 MP Front Camera, VoLTE, Dual SIM",
+    "Quantity": "100",
+    "PriceBefore": "16470",
+    "Price": "15990",
+    "Discount": "3",
+    "Save": "480",
+    "CategoryId": "20",
+    "BrandId": "2"
+  },
+  {
+    "Name": "Vivo Z1 Pro",
+    "Description": "Android v9.0 (Pie), 2.3 GHz Octa Core, 4 GB RAM, 64 GB Storage, 6.53&quot; (16.59 cm) Display, 5000 mAh Battery, 16 MP Rear Camera, 32 MP Front Camera, VoLTE, Dual SIM",
+    "Quantity": "",
+    "PriceBefore": "",
+    "Price": "",
+    "Discount": "",
+    "Save": "",
+    "CategoryId": "20",
+    "BrandId": "2"
+  },
+  {
+    "Name": "Vivo Z1 Pro 128GB",
+    "Description": "Android v9.0 (Pie), 2.3 GHz Octa Core, 6 GB RAM, 128 GB Storage, 6.53&quot; (16.59 cm) Display, 5000 mAh Battery, 16 MP Rear Camera, 32 MP Front Camera, VoLTE, Dual SIM",
+    "Quantity": "",
+    "PriceBefore": "",
+    "Price": "",
+    "Discount": "",
+    "Save": "",
+    "CategoryId": "20",
+    "BrandId": "2"
+  },
+  {
+    "Name": "Vivo Y15 (Burgundy Red, 4GB RAM, 64GB Storage)",
+    "Description": "13MP+8MP+2MP triple rear camera | 16MP front camera, 16.15 centimeters (6.35-inch) with 720 x 1544 pixels resolution, Memory - Storage 4GB RAM | 64GB internal memory expandable up to 256GB | Dual SIM (nano+nano) dual-standby (4G+4G), Android Pie v9.0 operating system with MediaTek Helio P22 octa core processor, 5000mAH lithium-ion battery",
+    "Quantity": "100",
+    "PriceBefore": "13069",
+    "Price": "11990",
+    "Discount": "9",
+    "Save": "1079",
+    "CategoryId": "20",
+    "BrandId": "2"
+  },
+  {
+    "Name": "Vivo V15 (Aqua Blue, 6GB RAM, 64GB Storage)",
+    "Description": "12MP (24 million photosensitive Units) + 8MP + 5MP AI Triple rear camera and 32MP front facing camera, 16.59 centimeters (6.53-inch) with 2340 x 1080 pixels resolution, Memory - Storage 6GB RAM | 64GB storage expandable up to 256GB| Dual SIM with dual standby (4G+4G), Android v9 Pie operating system with MediaTek P70 octa core processor, 4000mAH lithium-ion battery",
+    "Quantity": "100",
+    "PriceBefore": "20590",
+    "Price": "19990",
+    "Discount": "3",
+    "Save": "600",
+    "CategoryId": "20",
+    "BrandId": "2"
+  },
+  {
+    "Name": "Vivo Y91 (Nebula Purple, 3GB RAM, 32GB Storage)",
+    "Description": "13MP+2MP AI dual rear camera | 8MP front facing camera, 15.80 centimeters (6.22-inch) HD+ halo fullview display with 1520 x 720 pixels resolution, Memory Storage 3GB RAM | 32GB internal memory expandable up to 256GB | Dual SIM (nano+nano) dual-standby (4G+4G), Android Oreo v8.1 + Funtouch OS 4.5 operating system with Qualcomm Snapdragon 439 octa core processor, 4030mAH lithium-ion battery",
+    "Quantity": "100",
+    "PriceBefore": "8745",
+    "Price": "8490",
+    "Discount": "3",
+    "Save": "255",
+    "CategoryId": "20",
+    "BrandId": "2"
+  },
+  {
+    "Name": "Vivo Y17 (Mineral Blue, 4GB RAM, 128GB Storage)",
+    "Description": "13MP+8MP+2MP triple rear camera with HDR mode, portrait mode | 20MP front camera with face beauty, portrait bokeh | Frame Rate: 30 fps, 6.3inch (16.15 centimeters) Halo fullview display capacitive touchscreen with 720 x 1544 pixels resolution, Memory, Storage and SIM: 4GB RAM | 128GB internal memory expandable up to 256GB | Dual SIM (nano+nano) dual-standby (4G+4G), Android Pie v9.0 operating system with MediaTek P35 octa core processor, 5000mAH lithium-ion massive battery with dual-engine fast charging",
+    "Quantity": "100",
+    "PriceBefore": "14410",
+    "Price": "13990",
+    "Discount": "3",
+    "Save": "420",
+    "CategoryId": "20",
+    "BrandId": "2"
+  },
+  {
+    "Name": "OPPO F11 Pro",
+    "Description": "Android v9.0 (Pie), 2.1 GHz Octa Core, 6 GB RAM, 64 GB Storage, 6.5&quot; (16.51 cm) Display, 4000 mAh Battery, 48 MP Rear Camera, 16 MP Front Camera, VoLTE, Dual SIM, Quick Charging",
+    "Quantity": "100",
+    "PriceBefore": "19561",
+    "Price": "18991",
+    "Discount": "3",
+    "Save": "570",
+    "CategoryId": "20",
+    "BrandId": "3"
+  },
+  {
+    "Name": "OPPO K3",
+    "Description": "Android v9.0 (Pie), 2.2 GHz Octa Core, 6 GB RAM, 64 GB Storage, 6.5&quot; (16.51 cm) Display, 3765 mAh Battery, 16 MP Rear Camera, 16 MP Front Camera, VoLTE, Dual SIM",
+    "Quantity": "",
+    "PriceBefore": "",
+    "Price": "",
+    "Discount": "",
+    "Save": "",
+    "CategoryId": "20",
+    "BrandId": "3"
+  },
+  {
+    "Name": "OPPO Reno Z",
+    "Description": "Android v9.0 (Pie), 2.2 GHz Octa Core, 6 GB RAM, 256 GB Storage, 6.4&quot; (16.26 cm) Display, 4035 mAh Battery, 48 MP Rear Camera, 32 MP Front Camera, VoLTE, Dual SIM, Quick Charging",
+    "Quantity": "",
+    "PriceBefore": "",
+    "Price": "",
+    "Discount": "",
+    "Save": "",
+    "CategoryId": "20",
+    "BrandId": "3"
+  },
+  {
+    "Name": "OPPO Reno 2 F",
+    "Description": "48+8+2+2MP rear camera with photo, video, professional mode, panorama, portrait, night scene, time-lapse photography, slow motion and 16MP front facing camera, 16.5 centimeters (6.5-inch) AMOLED display with 2340 x 1080 pixels resolution, 394 ppi pixel density and 16M color support | Corning Gorilla Glass 5 protection with screen-to-body ratio of 91.6%, Memory Storage : 8GB RAM | 128GB internal memory expandable up to 128GB | Dual SIM (nano+nano) dual-standby (4G+4G), Android v9.0 based on Color OS 6.1 operating system with 2.0GHz Helio P70 octa core processor, ARM Mali-G72 ,4000mAH lithium-polymer battery",
+    "Quantity": "100",
+    "PriceBefore": "26389",
+    "Price": "23990",
+    "Discount": "10",
+    "Save": "2399",
+    "CategoryId": "20",
+    "BrandId": "3"
+  },
+  {
+    "Name": "OPPO F11 (Fluorite Purple, 6GB RAM, 128GB Storage)",
+    "Description": "148MP+5MP dual rear camera with normal, video, expert, time-lapse, panorama, portrait, slow-motion | 16MP front camera, 16.58 centimeters (6.5-inch) FHD+ multi-touch capacitive touchscreen with 2340 x 1080 pixels resolution, 394 ppi pixel density, Memory Storage - 6GB RAM | 128GB internal memory expandable up to 256GB | Dual SIM (nano+nano) dual-standby (4G+4G), Android ColorOS v6.0 operating system with 2.1 GHz MediaTek Helio P70 octa core processor, ARM Mali G72, 4020mAH lithium-ion battery providing talk-time of 36 hours and standby time of 360 hours",
+    "Quantity": "100",
+    "PriceBefore": "17500",
+    "Price": "16990",
+    "Discount": "3",
+    "Save": "510",
+    "CategoryId": "20",
+    "BrandId": "3"
+  },
+  {
+    "Name": "OPPO A5S (Green, 4GB RAM, 64GB Storage)",
+    "Description": "13MP+2MP dual rear camera with AI face beauty, gender detection, AR sticker, face beauty video, camera filter, HDR | 8MP front camera, 15.748 centimeters (6.2-inch) HD+ IPS capacitive multi touch screen with 1520 x 720 pixels resolution, 270 ppi pixel density | 16M color support, Memory, Storage &amp; SIM: 4GB RAM | 64GB internal memory expandable up to 256GB | Dual SIM (nano+nano) dual-standby (4G+4G), Android v8.1 Oreo based on Color OS 5.1 operating system with 2.4GHz Mediatek 6765 octa core processor, IMG GE8320, 4230mAH lithium-polymer battery providing talk-time of 32 hours and standby time of 410 hours",
+    "Quantity": "100",
+    "PriceBefore": "11320",
+    "Price": "10990",
+    "Discount": "3",
+    "Save": "330",
+    "CategoryId": "20",
+    "BrandId": "3"
+  },
+  {
+    "Name": "OPPO A9 2020 (Space Purple, 8GB RAM, 128GB Storage)",
+    "Description": "48+8+2+2MP rear quad camera with 119 degree ultra wide, ultra night mode, video EIS anti-shake, portrait | 16MP AI front camera, 16.5 centimeters (6.5-inch) with 1600 x 720 pixels resolution and waterdrop screen | Corning Gorilla 3+ screen, sunlight screen, night shield with blue light filter, Memory Storage : 8GB RAM | 128GB internal memory expandable up to 256GB | Dual SIM (nano+nano) dual-standby (4G+4G), Android v9.0 based on Color OS 6.1 operating system with 2.0GHz SM6125 Qualcomm Snapdragon 665 octa core processor, Adreno 610 GPU, 5000mAH lithium-polymer battery | reverse charging supported",
+    "Quantity": "100",
+    "PriceBefore": "20229",
+    "Price": "18390",
+    "Discount": "10",
+    "Save": "1839",
+    "CategoryId": "20",
+    "BrandId": "3"
+  },
+  {
+    "Name": "OPPO A5 2020 (Dazzling White, 4GB RAM, 64GB Storage)",
+    "Description": "12+8+2+2MP rear camera with 119 degree ultra wide, ultra night mode, video EIS anti-shake, portrait | 8MP AI front camera, 16.5 centimeters (6.5-inch) with 1600 x 720 pixels resolution and waterdrop screen | Corning Gorilla 3+ screen, sunlight screen, night shield with blue light filter, Memory Storage : 4GB RAM | 64GB internal memory expandable up to 256GB | Dual SIM (nano+nano) dual-standby (4G+4G), Android v9.0 based on Color OS 6.1 operating system with 2.0GHz SM6125 Qualcomm Snapdragon 665 octa core processor, Adreno 610 GPU, 5000mAH lithium-polymer battery | reverse charging supported",
+    "Quantity": "100",
+    "PriceBefore": "14410",
+    "Price": "13990",
+    "Discount": "3",
+    "Save": "420",
+    "CategoryId": "20",
+    "BrandId": "3"
+  },
+  {
+    "Name": "OPPO A7 (Glaring Gold, 3GB RAM, 64GB Storage)",
+    "Description": "13MP+2MP dual rear camera with AI beauty, HDR, background blur, sticker, filter | 16MP front facing camera, 15.8 centimeters (6.2-inch) HD + in-cell capacitive touchscreen with 1520 x 720 pixels resolution, 270 ppi pixel density and 16M color support, Memory Storage: 3GB RAM | 64GB storage expandable up to 256GB | Dual nano SIM with dual standby (4G+4G), Android v8.1 Oreo based on Color OS 5.2 operating system with 1.8GHz Qualcomm Snapdragon 450 octa core processor, Adreno 506 GPU, 4230mAH lithium-polymer battery providing talk-time of 32 hours and standby time of 410 hours",
+    "Quantity": "100",
+    "PriceBefore": "10290",
+    "Price": "9990",
+    "Discount": "3",
+    "Save": "300",
+    "CategoryId": "20",
+    "BrandId": "3"
+  },
+  {
+    "Name": "Apple iPhone X",
+    "Description": "iOS v11.0.12.39 GHz Hexa Core, 3 GB RAM, 64 GB Storage, 5.8 (14.73 cm) Display, 2716 mAh Battery, 12 MP Rear Camera, 7 MP Front Camera, VoLTE, Single SIM, Quick Charging",
+    "Quantity": "",
+    "PriceBefore": "",
+    "Price": "",
+    "Discount": "",
+    "Save": "",
+    "CategoryId": "20",
+    "BrandId": "4"
+  },
+  {
+    "Name": "Apple iPhone 7",
+    "Description": "iOS v10, 2.34 GHz Quad Core, 2 GB RAM, 32 GB Storage, 4.7&quot; (11.94 cm) Display, 1960 mAh Battery, 12 MP Rear Camera, 7 MP Front Camera, VoLTE, Single SIM, No Quick Charging",
+    "Quantity": "",
+    "PriceBefore": "",
+    "Price": "",
+    "Discount": "",
+    "Save": "",
+    "CategoryId": "20",
+    "BrandId": "4"
+  },
+  {
+    "Name": "Apple iPhone 6s 32 GB",
+    "Description": "iOS v9, 1.84 GHz Dual Core, 2 GB RAM, 32 GB Storage, 4.7 (11.94 cm) Display, 1715 mAh Battery, 12 MP Rear Camera, 5 MP Front Camera, VoLTE Single SIM, No Quick Charging",
+    "Quantity": "100",
+    "PriceBefore": "25199",
+    "Price": "23999",
+    "Discount": "5",
+    "Save": "1200",
+    "CategoryId": "20",
+    "BrandId": "4"
   }
 ]

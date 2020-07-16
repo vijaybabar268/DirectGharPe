@@ -13,9 +13,9 @@
     <thead>
         <tr class="btn-primary">
             <th>Name</th>
+            <th style="width: 100px;">Photo</th>
             <th>Category</th>
             <th>Brand</th>
-            <th>Photo</th>
             <th>Price</th>
             <th>Quantity</th>
             <th>Status</th>
@@ -44,26 +44,30 @@
                         }
                     },
                     {
+                        data: "photo.photoThumbUrl",
+                        render: function (data, type, product) {
+                            if (product.photo != null && product.photo.isActive) {
+                                return '<div class="imageContainer"><img src="@Request.Url.GetLeftPart(UriPartial.Authority)//' + data + '" /></div>'
+                            } else {
+                                return "<p class='text-center'>-</p>";
+                            }
+                        }
+                    },
+                    {
                         data: "category.name"
                     },
                     {
                         data: "brand.name"
                     },
                     {
-                        data: "photo.photoThumbUrl",
-                        render: function (data, type, product) {                            
-                            if (product.photo != null && product.photo.isActive) {
-                                return '<div class="imageContainer"><img src="@Request.Url.GetLeftPart(UriPartial.Authority)//' + data + '" /></div>'
-                            } else {
-                                return "NA";
-                            }                                                        
-                        }
-                    },                    
-                    {
                         data: "price",
-                        render: function (data, type, product) {
-                            debugger
-                            return '₹ <strike>' + product.priceBefore + '</strike> ₹ ' + product.price + ' ' + product.discount + '% Off, Save ₹ ' + product.save;
+                        render: function (data, type, product) {                            
+                            if (product.price != null) {
+                                return '₹ <strike>' + product.priceBefore + '</strike> ₹ <strong>' + product.price + '</strong> ' + product.discount + '% Off Save ₹ ' + product.save;
+                            } else {
+                                return '-';
+                            }
+                            
                         }
                     },
                     {
@@ -81,7 +85,7 @@
                     },
                     {
                         data: "id",
-                        render: function (data, type, product) {                            
+                        render: function (data, type, product) {
                             return "<a class='btn btn-link remove-padding' href='Products/Edit/" + data + "'>Edit</a>" +
                                 " | <a class='btn btn-link remove-padding' href='Products/ToggleStatus/" + data + "'>Toggle Status</a>"+
                                 " | <button class='btn btn-link remove-padding js-delete' data-product-id=" + data + ">Delete</button>" +

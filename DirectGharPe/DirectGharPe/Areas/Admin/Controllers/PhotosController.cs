@@ -88,7 +88,7 @@ namespace DirectGharPe.Areas.Admin.Controllers
             viewModel.PhotoUrl = folderPath + "" + fillName;
 
             Bitmap bmpPostedThumbImage = new System.Drawing.Bitmap(PhotoUrl.InputStream);
-            var thumbImage = ScaleImage(bmpPostedThumbImage, 80, 115);
+            var thumbImage = ScaleImage(bmpPostedThumbImage, 125, null);
 
             thumbImage.Save(Path.Combine(folderFullPath, "thumb_" + fillName));
             viewModel.PhotoThumbUrl = folderPath + "thumb_" + fillName;

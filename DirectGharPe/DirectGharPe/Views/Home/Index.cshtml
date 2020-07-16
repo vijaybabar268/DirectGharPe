@@ -23,9 +23,50 @@
 </div>
 
 <div class="row text-center">
-
     @{
         foreach (Product item in Model.topSellerElectronics)
+        {
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <div class="caption text-center" onclick="location.href=''">
+                        @if (item.Photo == null || !item.Photo.IsActive)
+                        {
+                            <div class="position-relative imageContainer">
+                                <img src="~/Content/img/no-image-available.jpg" style="height:235px;" />
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="position-relative imageContainer">
+                                <img src="@Request.Url.GetLeftPart(UriPartial.Authority)//@item.Photo.PhotoUrl" style="height:235px;" />
+                            </div>
+                        }
+                        <h4 id="thumbnail-label"><a href="" target="_blank">@item.Name</a></h4>
+                    </div>
+                    <div class="card-footer text-center">
+                        <ul class="list-inline">
+                            <li class="text-left"><i class="people lighter"></i><span class="final-price">₹ @string.Format("{0:N0}", item.Price)</span> <br /> <span>₹ <strike>@string.Format("{0:N0}", item.PriceBefore)</strike></span> </li>
+                            <li></li>
+                            <li class="text-right"><i class="glyphicon lighter"></i><span class="discount">@string.Format("{0}", item.Discount)% off</span> <br />You Save <span class="you-save">₹ @string.Format("{0:N0}", item.Save)</span></li>
+                        </ul>
+                        <button class="btn btn-warning">Add Cart</button>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>
+
+@*Top Seller in Cloating & Fashion*@
+<div class="row pd1">
+    <div class="col-md-12">
+        <h3>Top Seller in Cloating & Fashion</h3>
+    </div>
+</div>
+
+<div class="row text-center">
+    @{
+        foreach (Product item in Model.topSellerCloating)
         {
             <div class="col-md-3">
                 <div class="thumbnail">
@@ -46,9 +87,9 @@
                     </div>
                     <div class="card-footer text-center">
                         <ul class="list-inline">
-                            <li class="text-left"><i class="people lighter"></i><span class="final-price">₹ @string.Format("{0:N0}", item.Price)</span> <br /> <span>₹ <strike>24,034</strike></span> </li>
+                            <li class="text-left"><i class="people lighter"></i><span class="final-price">₹ @string.Format("{0:N0}", item.Price)</span> <br /> <span>₹ <strike>@string.Format("{0:N0}", item.PriceBefore)</strike></span> </li>
                             <li></li>
-                            <li class="text-right"><i class="glyphicon lighter"></i><span class="discount">10% off</span> <br />You Save <span class="you-save">₹ 2,185</span></li>
+                            <li class="text-right"><i class="glyphicon lighter"></i><span class="discount">@string.Format("{0}", item.Discount)% off</span> <br />You Save <span class="you-save">₹ @string.Format("{0:N0}", item.Save)</span></li>
                         </ul>
                         <button class="btn btn-warning">Add Cart</button>
                     </div>
@@ -58,46 +99,6 @@
     }
 </div>
 
-@*Top Seller in Cloating & Fashion*@
-<div class="row pd1">
-    <div class="col-md-12">
-        <h3>Top Seller in Cloating & Fashion</h3>
-    </div>
-</div>
-
-@{
-    foreach (Product item in Model.topSellerCloating)
-    {
-        <div class="col-md-3">
-            <div class="thumbnail">
-                <div class="caption text-center" onclick="location.href=''">
-                    @if (item.Photo == null)
-                    {
-                        <div class="position-relative imageContainer">
-                            <img src="~/Content/img/no-image-available.jpg" style="height:235px;" />
-                        </div>
-                    }
-                    else
-                    {
-                        <div class="position-relative imageContainer">
-                            <img src="@Request.Url.GetLeftPart(UriPartial.Authority)//@item.Photo.PhotoThumbUrl" style="height:235px;" />
-                        </div>
-                    }
-                    <h4 id="thumbnail-label"><a href="" target="_blank">@item.Name</a></h4>
-                </div>
-                <div class="card-footer text-center">
-                    <ul class="list-inline">
-                        <li class="text-left"><i class="people lighter"></i><span class="final-price">₹ @string.Format("{0:N0}", item.Price)</span> <br /> <span>₹ <strike>24,034</strike></span> </li>
-                        <li></li>
-                        <li class="text-right"><i class="glyphicon lighter"></i><span class="discount">10% off</span> <br />You Save <span class="you-save">₹ 2,185</span></li>
-                    </ul>
-                    <button class="btn btn-warning">Add Cart</button>
-                </div>
-            </div>
-        </div>
-    }
-}
-
 @*Top Seller in Jewellery*@
 <div class="row pd1">
     <div class="col-md-12">
@@ -105,38 +106,40 @@
     </div>
 </div>
 
-@{
-    foreach (Product item in Model.topSellerJewellery)
-    {
-        <div class="col-md-3">
-            <div class="thumbnail">
-                <div class="caption text-center" onclick="location.href=''">
-                    @if (item.Photo == null)
-                    {
-                        <div class="position-relative imageContainer">
-                            <img src="~/Content/img/no-image-available.jpg" style="height:235px;" />
-                        </div>
-                    }
-                    else
-                    {
-                        <div class="position-relative imageContainer">
-                            <img src="@Request.Url.GetLeftPart(UriPartial.Authority)//@item.Photo.PhotoThumbUrl" style="height:235px;" />
-                        </div>
-                    }
-                    <h4 id="thumbnail-label"><a href="" target="_blank">@item.Name</a></h4>
-                </div>
-                <div class="card-footer text-center">
-                    <ul class="list-inline">
-                        <li class="text-left"><i class="people lighter"></i><span class="final-price">₹ @string.Format("{0:N0}", item.Price)</span> <br /> <span>₹ <strike>24,034</strike></span> </li>
-                        <li></li>
-                        <li class="text-right"><i class="glyphicon lighter"></i><span class="discount">10% off</span> <br />You Save <span class="you-save">₹ 2,185</span></li>
-                    </ul>
-                    <button class="btn btn-warning">Add Cart</button>
+<div class="row text-center">
+    @{
+        foreach (Product item in Model.topSellerJewellery)
+        {
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <div class="caption text-center" onclick="location.href=''">
+                        @if (item.Photo == null)
+                        {
+                            <div class="position-relative imageContainer">
+                                <img src="~/Content/img/no-image-available.jpg" style="height:235px;" />
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="position-relative imageContainer">
+                                <img src="@Request.Url.GetLeftPart(UriPartial.Authority)//@item.Photo.PhotoThumbUrl" style="height:235px;" />
+                            </div>
+                        }
+                        <h4 id="thumbnail-label"><a href="" target="_blank">@item.Name</a></h4>
+                    </div>
+                    <div class="card-footer text-center">
+                        <ul class="list-inline">
+                            <li class="text-left"><i class="people lighter"></i><span class="final-price">₹ @string.Format("{0:N0}", item.Price)</span> <br /> <span>₹ <strike>@string.Format("{0:N0}", item.PriceBefore)</strike></span> </li>
+                            <li></li>
+                            <li class="text-right"><i class="glyphicon lighter"></i><span class="discount">@string.Format("{0}", item.Discount)% off</span> <br />You Save <span class="you-save">₹ @string.Format("{0:N0}", item.Save)</span></li>
+                        </ul>
+                        <button class="btn btn-warning">Add Cart</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        }
     }
-}
+</div>
 
 @*Top Seller in Fashion*@
 <div class="row pd1">
@@ -145,38 +148,40 @@
     </div>
 </div>
 
-@{
-    foreach (Product item in Model.topSellerFashion)
-    {
-        <div class="col-md-3">
-            <div class="thumbnail">
-                <div class="caption text-center" onclick="location.href=''">
-                    @if (item.Photo == null)
-                    {
-                        <div class="position-relative imageContainer">
-                            <img src="~/Content/img/no-image-available.jpg" style="height:235px;" />
-                        </div>
-                    }
-                    else
-                    {
-                        <div class="position-relative imageContainer">
-                            <img src="@Request.Url.GetLeftPart(UriPartial.Authority)//@item.Photo.PhotoThumbUrl" style="height:235px;" />
-                        </div>
-                    }
-                    <h4 id="thumbnail-label"><a href="" target="_blank">@item.Name</a></h4>
-                </div>
-                <div class="card-footer text-center">
-                    <ul class="list-inline">
-                        <li class="text-left"><i class="people lighter"></i><span class="final-price">₹ @string.Format("{0:N0}", item.Price)</span> <br /> <span>₹ <strike>24,034</strike></span> </li>
-                        <li></li>
-                        <li class="text-right"><i class="glyphicon lighter"></i><span class="discount">10% off</span> <br />You Save <span class="you-save">₹ 2,185</span></li>
-                    </ul>
-                    <button class="btn btn-warning">Add Cart</button>
+<div class="row text-center">
+    @{
+        foreach (Product item in Model.topSellerFashion)
+        {
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <div class="caption text-center" onclick="location.href=''">
+                        @if (item.Photo == null)
+                        {
+                            <div class="position-relative imageContainer">
+                                <img src="~/Content/img/no-image-available.jpg" style="height:235px;" />
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="position-relative imageContainer">
+                                <img src="@Request.Url.GetLeftPart(UriPartial.Authority)//@item.Photo.PhotoThumbUrl" style="height:235px;" />
+                            </div>
+                        }
+                        <h4 id="thumbnail-label"><a href="" target="_blank">@item.Name</a></h4>
+                    </div>
+                    <div class="card-footer text-center">
+                        <ul class="list-inline">
+                            <li class="text-left"><i class="people lighter"></i><span class="final-price">₹ @string.Format("{0:N0}", item.Price)</span> <br /> <span>₹ <strike>@string.Format("{0:N0}", item.PriceBefore)</strike></span> </li>
+                            <li></li>
+                            <li class="text-right"><i class="glyphicon lighter"></i><span class="discount">@string.Format("{0}", item.Discount)% off</span> <br />You Save <span class="you-save">₹ @string.Format("{0:N0}", item.Save)</span></li>
+                        </ul>
+                        <button class="btn btn-warning">Add Cart</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        }
     }
-}
+</div>
 
 @*Most Popular*@
 <div class="row pd1">
@@ -185,38 +190,40 @@
     </div>
 </div>
 
-@{
-    foreach (Product item in Model.mostPopular)
-    {
-        <div class="col-md-3">
-            <div class="thumbnail">
-                <div class="caption text-center" onclick="location.href=''">
-                    @if (item.Photo == null)
-                    {
-                        <div class="position-relative imageContainer">
-                            <img src="~/Content/img/no-image-available.jpg" style="height:235px;" />
-                        </div>
-                    }
-                    else
-                    {
-                        <div class="position-relative imageContainer">
-                            <img src="@Request.Url.GetLeftPart(UriPartial.Authority)//@item.Photo.PhotoThumbUrl" style="height:235px;" />
-                        </div>
-                    }
-                    <h4 id="thumbnail-label"><a href="" target="_blank">@item.Name</a></h4>
-                </div>
-                <div class="card-footer text-center">
-                    <ul class="list-inline">
-                        <li class="text-left"><i class="people lighter"></i><span class="final-price">₹ @string.Format("{0:N0}", item.Price)</span> <br /> <span>₹ <strike>24,034</strike></span> </li>
-                        <li></li>
-                        <li class="text-right"><i class="glyphicon lighter"></i><span class="discount">10% off</span> <br />You Save <span class="you-save">₹ 2,185</span></li>
-                    </ul>
-                    <button class="btn btn-warning">Add Cart</button>
+<div class="row text-center">
+    @{
+        foreach (Product item in Model.mostPopular)
+        {
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <div class="caption text-center" onclick="location.href=''">
+                        @if (item.Photo == null)
+                        {
+                            <div class="position-relative imageContainer">
+                                <img src="~/Content/img/no-image-available.jpg" style="height:235px;" />
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="position-relative imageContainer">
+                                <img src="@Request.Url.GetLeftPart(UriPartial.Authority)//@item.Photo.PhotoThumbUrl" style="height:235px;" />
+                            </div>
+                        }
+                        <h4 id="thumbnail-label"><a href="" target="_blank">@item.Name</a></h4>
+                    </div>
+                    <div class="card-footer text-center">
+                        <ul class="list-inline">
+                            <li class="text-left"><i class="people lighter"></i><span class="final-price">₹ @string.Format("{0:N0}", item.Price)</span> <br /> <span>₹ <strike>@string.Format("{0:N0}", item.PriceBefore)</strike></span> </li>
+                            <li></li>
+                            <li class="text-right"><i class="glyphicon lighter"></i><span class="discount">@string.Format("{0}", item.Discount)% off</span> <br />You Save <span class="you-save">₹ @string.Format("{0:N0}", item.Save)</span></li>
+                        </ul>
+                        <button class="btn btn-warning">Add Cart</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        }
     }
-}
+</div>
 
 @*Why should you choose us*@
 <div class="row pd1">
