@@ -9,11 +9,21 @@
 
 <div class="row text-center">
     <div class="col-md-3">
-        <p class="list-group-item text-left" style="font-weight:500;">Sub Category</p>
-        @Html.Partial("_ProductNavFilterPartial", Model.ProductSubCategories)
+        @{
+            if (Model.ProductSubCategories.Count() > 0)
+            {
+                <p class="list-group-item text-left" style="font-weight:500;">Sub Category</p>
+                @Html.Partial("_ProductNavFilterPartial", Model.ProductSubCategories)
+            }
+        }
 
-        <p class="list-group-item text-left" style="font-weight:500;">Product Brands</p>
-        @Html.Partial("_ProductNavFilterPartial", Model.ProductBrands)
+        @{
+            if (Model.ProductBrands.Count() > 0)
+            {
+                <p class="list-group-item text-left" style="font-weight:500;">Brands</p>
+                @Html.Partial("_ProductNavFilterPartial", Model.ProductBrands)
+            }
+        }
     </div>
     <div class="col-md-9">
         <div class="col-md-4">

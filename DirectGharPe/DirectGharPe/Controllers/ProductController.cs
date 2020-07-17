@@ -27,12 +27,12 @@ namespace DirectGharPe.Controllers
             var viewModel = new CategoryViewModel()
             {
                 ProductSubCategories = _context.Categories.Where(c => c.ParentId == parentCatId).ToList(),
-                ProductBrands = _context.Brands.ToList(),
+                ProductBrands = _context.Brands.Where(b => b.ParentId == parentCatId).ToList(),
                 CategoryId = id,
                 CategoryName = name                
             };
 
-            Session["MainCategory"] = _context.Categories.Where(c => c.ParentId == 0).ToList();
+            Session["MainCategory"] = _context.Categories.Where(c => c.IsActive && c.ParentId == 0).ToList();
 
             return View(viewModel);                        
         }

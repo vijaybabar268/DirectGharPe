@@ -46,23 +46,9 @@ namespace DirectGharPe.Controllers
                                     .ToList(),
             };
 
-            Session["MainCategory"] = _context.Categories.Where(c => c.ParentId == 0).ToList();
+            Session["MainCategory"] = _context.Categories.Where(c=> c.IsActive && c.ParentId == 0).ToList();
 
             return View(viewModel);
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+        }        
     }
 }
