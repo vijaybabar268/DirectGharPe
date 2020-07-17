@@ -29,17 +29,21 @@ namespace DirectGharPe.Controllers
                                         .Include(x=>x.Photo)
                                         .ToList(),
 
-                topSellerCloating = _context.Products.Where(c => c.CategoryId == 2).Take(4)
-                                        .Include(p => p.Photo).ToList(),
+                topSellerCloating = _context.Products.Where(c => c.CategoryId == 20).Take(4)
+                                        .Include(p => p.Photo)
+                                        .ToList(),
 
-                topSellerJewellery = _context.Products.Where(c => c.CategoryId == 3).Take(4)
-                                        .Include(p => p.Photo).ToList(),
+                topSellerJewellery = _context.Products.Where(c => c.CategoryId == 20).Take(4)
+                                        .Include(p => p.Photo)
+                                        .ToList(),
 
-                topSellerFashion = _context.Products.Where(c => c.CategoryId == 4).Take(4)
-                                        .Include(p => p.Photo).ToList(),
+                topSellerFashion = _context.Products.Where(c => c.CategoryId == 20).Take(4)
+                                        .Include(p => p.Photo)
+                                        .ToList(),
 
-                mostPopular = _context.Products.Where(c => c.CategoryId == 1).Take(4)
-                                    .Include(p => p.Photo).ToList(),
+                mostPopular = _context.Products.Where(c => c.CategoryId == 20).Take(4)
+                                    .Include(p => p.Photo)
+                                    .ToList(),
             };
 
             Session["MainCategory"] = _context.Categories.Where(c => c.ParentId == 0).ToList();

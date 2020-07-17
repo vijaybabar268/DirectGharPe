@@ -20,7 +20,7 @@
                             foreach (Category category in ((IEnumerable<Category>)Session["MainCategory"]))
                             {
                                 <li>
-                                    @Html.ActionLink(category.Name, "Category", "Product", new { id = category.Id, name = category.Name }, null)
+                                    @Html.ActionLink(category.Name, "Category", "Product", new { id = category.Id, name = category.Name }, new { style="text-transform:uppercase;" })
                                 </li>
                             }
                         }

@@ -574,6 +574,9 @@
     <Content Include="Views\Shared\_MainHeaderBar.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Account\OTP.cshtml" />
+    <Content Include="Views\Shared\_ProductNavFilterPartial.cshtml" />
+    <Content Include="Views\Shared\_ProductHomeListings.cshtml" />
+    <Content Include="Views\Shared\_WhyYouChooseUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Base\" />

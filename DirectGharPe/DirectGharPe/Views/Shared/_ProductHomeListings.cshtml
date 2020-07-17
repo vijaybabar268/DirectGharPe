@@ -1,0 +1,34 @@
+﻿<div class="row text-center">
+    @{
+        foreach (var item in Model)
+        {
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <div class="caption text-center" onclick="location.href=''">
+                        @if (item.Photo == null || !item.Photo.IsActive)
+                        {
+                            <div class="position-relative imageContainer">
+                                <img src="~/Content/img/no-image-available.jpg" style="height:235px;" />
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="position-relative imageContainer">
+                                <img src="@Request.Url.GetLeftPart(UriPartial.Authority)//@item.Photo.PhotoUrl" style="height:235px;" />
+                            </div>
+                        }
+                        <h4 id="thumbnail-label"><a href="" target="_blank">@item.Name</a></h4>
+                    </div>
+                    <div class="card-footer text-center">
+                        <ul class="list-inline">
+                            <li class="text-left"><i class="people lighter"></i><span class="final-price">₹ @string.Format("{0:N0}", item.Price)</span> <br /> <span>₹ <strike>@string.Format("{0:N0}", item.PriceBefore)</strike></span> </li>
+                            <li></li>
+                            <li class="text-right"><i class="glyphicon lighter"></i><span class="discount">@string.Format("{0}", item.Discount)% off</span> <br />You Save <span class="you-save">₹ @string.Format("{0:N0}", item.Save)</span></li>
+                        </ul>
+                        <button class="btn btn-warning">Add Cart</button>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>
