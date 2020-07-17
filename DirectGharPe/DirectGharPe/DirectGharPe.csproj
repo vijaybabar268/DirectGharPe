@@ -224,6 +224,10 @@
     <Compile Include="Migrations\202007081545466_AddedDiscountedPriceFeature.Designer.cs">
       <DependentUpon>202007081545466_AddedDiscountedPriceFeature.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007170751420_AddParentIdToBrand.cs" />
+    <Compile Include="Migrations\202007170751420_AddParentIdToBrand.Designer.cs">
+      <DependentUpon>202007170751420_AddParentIdToBrand.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -618,6 +622,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007081545466_AddedDiscountedPriceFeature.resx">
       <DependentUpon>202007081545466_AddedDiscountedPriceFeature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007170751420_AddParentIdToBrand.resx">
+      <DependentUpon>202007170751420_AddParentIdToBrand.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
