@@ -5,6 +5,7 @@ namespace DirectGharPe.ViewModels
 {
     public class CategoryViewModel
     {
+        public IEnumerable<Product> FilterListings { get; set; }
         public IEnumerable<Category> ProductSubCategories { get; set; }
         public IEnumerable<Brand> ProductBrands { get; set; }
         public string CategoryId { get; set; }

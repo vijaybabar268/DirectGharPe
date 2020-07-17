@@ -25,7 +25,7 @@ namespace DirectGharPe.Areas.Admin.ViewModels
         
         public IEnumerable<Category> Categories { get; set; }
         
-        public int Brand { get; set; }
+        public int? Brand { get; set; }
         
         public IEnumerable<Brand> Brands { get; set; }
 

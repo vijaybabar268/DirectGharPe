@@ -1,6 +1,7 @@
 ﻿using DirectGharPe.Models;
 using DirectGharPe.ViewModels;
 using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -23,9 +24,14 @@ namespace DirectGharPe.Controllers
         public ActionResult Category(string id, string name)
         {
             byte parentCatId = Byte.Parse(id);
+            var childCatId = _context.Categories.Where(c => c.IsActive && c.ParentId == parentCatId).Select(s => s.Id);
 
             var viewModel = new CategoryViewModel()
             {
+                FilterListings = _context.Products.Where(c => c.IsActive && c.Price != null && childCatId.Contains(c.CategoryId))
+                                .Include(p => p.Photo)
+                                .ToList(),
+
                 ProductSubCategories = _context.Categories.Where(c => c.ParentId == parentCatId).ToList(),
                 ProductBrands = _context.Brands.Where(b => b.ParentId == parentCatId).ToList(),
                 CategoryId = id,

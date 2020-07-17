@@ -37,9 +37,8 @@ namespace DirectGharPe.Models
         public int CategoryId { get; set; }
         
         public Brand Brand { get; set; }
-        
-        [Required]
-        public int BrandId { get; set; }
+                
+        public int? BrandId { get; set; }
 
         public Photo Photo { get; set; }
 

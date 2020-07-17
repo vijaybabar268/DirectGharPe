@@ -17,14 +17,42 @@
                                 <img src="@Request.Url.GetLeftPart(UriPartial.Authority)//@item.Photo.PhotoUrl" style="height:235px;" />
                             </div>
                         }
-                        <h4 id="thumbnail-label"><a href="" target="_blank">@item.Name</a></h4>
+                        <h4 id="thumbnail-label">
+                            <a href="" target="_blank">
+                            @{
+                                string productName = item.Name;
+
+                                if (productName.Length > 15)
+                                {
+                                    @productName.Substring(0, 15);
+                                }
+                                else
+                                {
+                                    @productName;
+                                }
+                            }
+                        </a>
+                        </h4>
                     </div>
                     <div class="card-footer text-center">
-                        <ul class="list-inline">
-                            <li class="text-left"><i class="people lighter"></i><span class="final-price">₹ @string.Format("{0:N0}", item.Price)</span> <br /> <span>₹ <strike>@string.Format("{0:N0}", item.PriceBefore)</strike></span> </li>
-                            <li></li>
-                            <li class="text-right"><i class="glyphicon lighter"></i><span class="discount">@string.Format("{0}", item.Discount)% off</span> <br />You Save <span class="you-save">₹ @string.Format("{0:N0}", item.Save)</span></li>
-                        </ul>
+                        @{
+                            if (item.PriceBefore != null)
+                            {
+                                <ul class="list-inline">
+                                    <li class="text-left"><i class="people lighter"></i><span class="final-price">₹ @string.Format("{0:N0}", item.Price)</span> <br /> <span>₹ <strike>@string.Format("{0:N0}", item.PriceBefore)</strike></span></li>
+                                    <li></li>
+                                    <li class="text-right"><i class="glyphicon lighter"></i><span class="discount">@string.Format("{0:N0}", item.Discount)% off</span> <br />You Save <span class="you-save">₹ @string.Format("{0:N0}", item.Save)</span></li>
+                                </ul>
+                            }
+                            else
+                            {
+                                <ul class="list-inline">
+                                    <li class="text-left"><i class="people lighter"></i><span class="final-price">₹ @string.Format("{0:N0}", item.Price)</span> </li>
+                                    <li></li>
+                                    <li class="text-right"><i class="glyphicon lighter"></i></li>
+                                </ul>
+                            }
+                        }
                         <button class="btn btn-warning">Add Cart</button>
                     </div>
                 </div>

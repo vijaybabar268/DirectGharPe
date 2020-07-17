@@ -57,17 +57,29 @@
                         data: "category.name"
                     },
                     {
-                        data: "brand.name"
+                        data: "brand",
+                        render: function (data, type, product) {
+                            if (data != null) {
+                                return '<div>' + product.brand.name +'</div>'
+                            } else {
+                                return "<p>-</p>";
+                            }
+                        }
                     },
                     {
                         data: "price",
-                        render: function (data, type, product) {                            
+                        render: function (data, type, product) {
                             if (product.price != null) {
-                                return '₹ <strike>' + product.priceBefore + '</strike> ₹ <strong>' + product.price + '</strong> ' + product.discount + '% Off Save ₹ ' + product.save;
+                                if (product.priceBefore != null) {
+                                    return '₹ <strike>' + product.priceBefore + '</strike> ₹ <strong>' + product.price + '</strong> ' + product.discount + '% Off Save ₹ ' + product.save;
+                                }
+                                else {
+                                    return '₹ <strong>' + product.price + '</strong>';
+                                }
                             } else {
                                 return '-';
                             }
-                            
+
                         }
                     },
                     {

@@ -228,6 +228,10 @@
     <Compile Include="Migrations\202007170751420_AddParentIdToBrand.Designer.cs">
       <DependentUpon>202007170751420_AddParentIdToBrand.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007170837455_SetNullableBrandInProduct.cs" />
+    <Compile Include="Migrations\202007170837455_SetNullableBrandInProduct.Designer.cs">
+      <DependentUpon>202007170837455_SetNullableBrandInProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -581,6 +585,7 @@
     <Content Include="Views\Shared\_ProductNavFilterPartial.cshtml" />
     <Content Include="Views\Shared\_ProductHomeListings.cshtml" />
     <Content Include="Views\Shared\_WhyYouChooseUs.cshtml" />
+    <Content Include="Views\Shared\_FilterListingsPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Base\" />
@@ -625,6 +630,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007170751420_AddParentIdToBrand.resx">
       <DependentUpon>202007170751420_AddParentIdToBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007170837455_SetNullableBrandInProduct.resx">
+      <DependentUpon>202007170837455_SetNullableBrandInProduct.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
