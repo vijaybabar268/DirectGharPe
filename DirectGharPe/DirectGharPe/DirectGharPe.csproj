@@ -238,6 +238,7 @@
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="ViewModels\CategoryProductDetailViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Photo.cs" />
     <Compile Include="Models\Product.cs" />

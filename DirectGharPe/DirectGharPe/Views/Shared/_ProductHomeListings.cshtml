@@ -4,7 +4,7 @@
         {
             <div class="col-md-3">
                 <div class="thumbnail">
-                    <div class="caption text-center" onclick="location.href=''">
+                    <div class="caption text-center" onclick="location.href='/Product/Detail/@item.Slug'">
                         @if (item.Photo == null || !item.Photo.IsActive)
                         {
                             <div class="position-relative imageContainer">
@@ -22,9 +22,9 @@
                             @{
                                 string productName = item.Name;
 
-                                if (productName.Length > 15)
+                                if (productName.Length > 20)
                                 {
-                                    @productName.Substring(0, 15);
+                                    @productName.Substring(0, 20);
                                 }
                                 else
                                 {

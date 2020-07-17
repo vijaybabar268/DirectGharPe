@@ -45,10 +45,23 @@ namespace DirectGharPe.Controllers
 
         public ActionResult Detail(string id)
         {
-            var viewModel = new CategoryViewModel()
-            {                
-                Title = "Product Detail"
+            var productId = _context.Products.SingleOrDefault(p => p.Slug == id).Id;
+
+            var viewModel = new CategoryProductDetailViewModel()
+            {
+                SimilarProducts = _context.Products
+                                        .Where(c => c.CategoryId == 20).Take(4)
+                                        .Include(x => x.Photo)
+                                        .ToList(),
+                Product = _context.Products.Where(p => p.IsActive && p.Slug == id)
+                            .Include(c => c. Category)
+                            .Include(p => p.Photo)
+                            .SingleOrDefault(),
+                Photos = _context.Photos.Where(p => p.ProductId == productId).ToList(),
+                Title = "Product Details"
             };
+
+            Session["MainCategory"] = _context.Categories.Where(c => c.IsActive && c.ParentId == 0).ToList();
 
             return View(viewModel);
         }
