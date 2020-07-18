@@ -28,7 +28,12 @@
             }                        
         </div>
     </div>
-    <div class="col-md-8 well well-lg">
+    <div id="productDetails" class="col-md-8 well well-lg">
+        <div style="display:block">
+            <input type="text" id="productId" value="@Model.Product.Id" />
+            <input type="text" id="productName" value="@Model.Product.Name" />
+            <input type="text" id="productPrice" value="@Model.Product.Price" />
+        </div>
         <div style="margin-bottom:35px">
             <div class="col-md-1" style="padding: 0;">
                 <p style="font-size: 12px;padding-top: 5px;"><strong>Share On</strong></p>
@@ -78,9 +83,9 @@
                 </ul>
             }
         }        
-        <p><strong>Quantity</strong> : <input type="number" name="quantity" value="1" class="form-control qty-dtl" /></p>
+        <p><strong>Quantity</strong> : <input type="number" id="productQuantity" value="1" class="form-control qty-dtl" /></p>
         <div class="prod-dtl-btn">
-            <button class="btn btn-warning">Add Cart</button>
+            <button class="btn btn-warning js-add-to-cart">Add Cart</button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="btn btn-success">Buy Now</button>
         </div>
@@ -101,3 +106,28 @@
     </div>
 </div>
 @Html.Partial("_ProductHomeListings", Model.SimilarProducts)
+
+@section Scripts
+{ 
+    <script>
+        $(document).on('click', '.js-add-to-cart', function () {
+            $.ajax({
+                url: "/Cart/AddToCart",
+                method: "POST",                
+                data: {
+                    id: $("#productDetails").find("#productId").val(),
+                    name: $("#productDetails").find("#productName").val(),
+                    price: $("#productDetails").find("#productPrice").val(),
+                    quantity: $("#productDetails").find("#productQuantity").val(),
+                    action: "AddToCart"             
+                }                
+            })
+            .done(function (data) {
+                console.log("Success");
+            })
+            .fail(function () {
+                console.log("fail");
+            });                        
+        });        
+    </script>    
+}
