@@ -49,6 +49,16 @@ namespace DirectGharPe.Controllers
             Session["MainCategory"] = _context.Categories.Where(c=> c.IsActive && c.ParentId == 0).ToList();
 
             return View(viewModel);
-        }        
+        }    
+        
+        public ActionResult MyOrders(string id)
+        {
+            return View();
+        }
+
+        public ActionResult MyProfile(string id)
+        {
+            return View();
+        }
     }
 }

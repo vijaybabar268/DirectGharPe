@@ -586,6 +586,8 @@
     <Content Include="Views\Shared\_ProductHomeListings.cshtml" />
     <Content Include="Views\Shared\_WhyYouChooseUs.cshtml" />
     <Content Include="Views\Shared\_FilterListingsPartial.cshtml" />
+    <Content Include="Views\Home\MyOrders.cshtml" />
+    <Content Include="Views\Home\MyProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Base\" />
