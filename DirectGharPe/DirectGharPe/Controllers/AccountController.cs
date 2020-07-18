@@ -2,7 +2,6 @@
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using System;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -56,13 +55,7 @@ namespace DirectGharPe.Controllers
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
-
-            var viewModel = new LoginViewModel()
-            {
-                
-            };
-
-            return View(viewModel);
+            return View();
         }
 
         //
@@ -77,14 +70,12 @@ namespace DirectGharPe.Controllers
                 return View(model);
             }
 
-            var viewModel = new LoginViewModel()
-            {
-
-            };
-
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            //var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+
+            var user = UserManager.FindByEmail(model.Email);
+            var result = await SignInManager.PasswordSignInAsync(user.UserName, model.Password, model.RememberMe, shouldLockout: false);
 
             switch (result)
             {
@@ -148,12 +139,7 @@ namespace DirectGharPe.Controllers
         // GET: /Account/Register
         [AllowAnonymous]
         public ActionResult Register()
-        {
-            var viewModel = new RegisterViewModel()
-            {
-
-            };
-
+        {            
             return View();
         }
 
@@ -182,7 +168,7 @@ namespace DirectGharPe.Controllers
                     //await roleManager.CreateAsync(new IdentityRole("Admin"));
                     //await UserManager.AddToRoleAsync(user.Id, "Admin");
 
-                    //await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
 
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
@@ -192,8 +178,8 @@ namespace DirectGharPe.Controllers
 
                     // OTP 
                     // Generating an OTP
-                    var random = new Random();
-                    var otp = random.Next(1000, 9999);
+                    /*var random = new Random();
+                    var otp = random.Next(1000, 9999);*/
 
                     // Sending an OTP                                        
                     //IEnumerable<KeyValuePair<string, string>> queries = new List<KeyValuePair<string, string>>()
@@ -220,10 +206,11 @@ namespace DirectGharPe.Controllers
                     //}
 
                     // Saving OTP Temp
-                    Session["OTP"] = otp;
+                    /*Session["OTP"] = otp;
                     Session["USER"] = user;
 
-                    return RedirectToAction("OTP", "Account");
+                    return RedirectToAction("OTP", "Account");*/
+                    return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
             }
@@ -234,13 +221,8 @@ namespace DirectGharPe.Controllers
 
         [AllowAnonymous]
         public ActionResult OTP()
-        {
-            var viewModel = new VerifyOTPViewModel() 
-            { 
-            
-            };
-
-            return View("OTP", viewModel);
+        { 
+            return View("OTP");
         }
 
         [AllowAnonymous]
