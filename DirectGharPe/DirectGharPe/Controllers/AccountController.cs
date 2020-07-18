@@ -2,6 +2,7 @@
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -168,7 +169,7 @@ namespace DirectGharPe.Controllers
                     //await roleManager.CreateAsync(new IdentityRole("Admin"));
                     //await UserManager.AddToRoleAsync(user.Id, "Admin");
 
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+                    //await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
 
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
@@ -178,8 +179,8 @@ namespace DirectGharPe.Controllers
 
                     // OTP 
                     // Generating an OTP
-                    /*var random = new Random();
-                    var otp = random.Next(1000, 9999);*/
+                    var random = new Random();
+                    var otp = random.Next(1000, 9999);
 
                     // Sending an OTP                                        
                     //IEnumerable<KeyValuePair<string, string>> queries = new List<KeyValuePair<string, string>>()
@@ -206,11 +207,11 @@ namespace DirectGharPe.Controllers
                     //}
 
                     // Saving OTP Temp
-                    /*Session["OTP"] = otp;
+                    Session["OTP"] = otp;
                     Session["USER"] = user;
 
-                    return RedirectToAction("OTP", "Account");*/
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("OTP", "Account");
+                    //return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
             }
@@ -228,8 +229,10 @@ namespace DirectGharPe.Controllers
         [AllowAnonymous]
         public async Task<ActionResult> VerifyOTP(VerifyOTPViewModel viewModel)
         {
-            if (!ModelState.IsValid)            
+            if (!ModelState.IsValid)
+            {
                 return View("OTP", viewModel);
+            }
 
             if (!string.IsNullOrWhiteSpace(viewModel.OTP))
             {
